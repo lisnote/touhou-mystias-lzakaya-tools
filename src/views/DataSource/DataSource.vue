@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { guests, dishes, beverages, ingredients } from '@/data';
-import globalStyles from '@/styles/globalStyles.module.scss';
+import common from '@/styles/common.module.scss';
 
 function stringify(value: any) {
   return JSON.stringify(value, null, 2);
@@ -15,7 +15,7 @@ const tabData = [
 </script>
 
 <template>
-  <div :class="globalStyles.contentArea">
+  <div :class="common.contentArea">
     <el-tabs>
       <el-tab-pane
         v-for="item in tabData"
