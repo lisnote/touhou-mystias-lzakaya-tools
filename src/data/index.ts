@@ -12,4 +12,4 @@ const data = {
   location,
 };
 
-export { data as default, beverages, dishes, guests, ingredients };
+export { data as default, beverages, dishes, guests, ingredients,location };

@@ -1,3 +1,4 @@
+import location from "./location";
 export default [
   {
     name: '爱丽丝',
