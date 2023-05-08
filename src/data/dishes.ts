@@ -1,23 +1,34 @@
+export type Dish = DeepReadonly<{
+  name: string;
+  cookware: string;
+  price: number;
+  ingredients: string[];
+  features: string[];
+  missingFeatures: string[];
+  cookingTime: number;
+  unlock: string;
+  description: string;
+}>;
 export const dishes = [
   {
     name: '白果萝卜排骨汤',
     cookware: '煮锅',
-    price: '65',
+    price: 65,
     ingredients: ['白果猪肉萝卜'],
     features: ['昂贵', '肉', '中华', '灼热', '汤羹'],
     missingFeatures: [],
-    cookingTime: '3.6',
+    cookingTime: 3.6,
     unlock: '【羁绊】 美铃 2 级',
     description: '来自红美铃老家的㷛汤技巧，色香味俱全，益气补血。',
   },
   {
     name: '白桃生八桥',
     cookware: '料理台',
-    price: '55',
+    price: 55,
     ingredients: ['糯米桃子'],
     features: ['和风', '甜', '果味'],
     missingFeatures: ['肉', '水产', '咸', '鲜'],
-    cookingTime: '3',
+    cookingTime: 3,
     unlock: '【羁绊】 帝 2 级',
     description:
       '状似外界古筝的经典和果子，加入白桃内陷之后呈现淡粉色，非常诱人。',
@@ -25,11 +36,11 @@ export const dishes = [
   {
     name: '白雪',
     cookware: '煮锅',
-    price: '98',
+    price: 98,
     ingredients: ['河豚八目鳗海苔'],
     features: ['昂贵', '肉', '水产', '高级', '和风', '文化底蕴'],
     missingFeatures: [],
-    cookingTime: '7.2',
+    cookingTime: 7.2,
     unlock: '【羁绊】 慧音 3 级',
     description:
       '使用鲜美的八目鳗与河豚，在佐以海胆炖煮而成的高级烩锅，由于煮的过程中会飘出纯白的泡沫而得名，是非常高级的家庭料理。',
@@ -37,22 +48,22 @@ export const dishes = [
   {
     name: '班尼迪克蛋',
     cookware: '油锅',
-    price: '35',
+    price: 35,
     ingredients: ['鸡蛋竹笋黄油'],
     features: ['饱腹', '西式', '生', '小巧'],
     missingFeatures: ['甜', '果味'],
-    cookingTime: '4.2',
+    cookingTime: 4.2,
     unlock: '【羁绊】 帕秋莉 1 级',
     description: '流黄的水波蛋和大口的碳水，是早午餐的常见选择。',
   },
   {
     name: '北极甜虾蜜桃色拉',
     cookware: '料理台',
-    price: '25',
+    price: 25,
     ingredients: ['桃子虾冰块'],
     features: ['水产', '素', '清淡', '甜', '适合拍照', '不可思议', '果味'],
     missingFeatures: ['咸', '肉'],
-    cookingTime: '6',
+    cookingTime: 6,
     unlock: '【羁绊】 天子 3 级',
     description:
       '选用品质最好、肉质最鲜的虾和桃子加工而成的高级料理，据说在外界只有在宴席上才有机会一见。',
@@ -60,11 +71,11 @@ export const dishes = [
   {
     name: '不死鸟',
     cookware: '烤架',
-    price: '65',
+    price: 65,
     ingredients: ['面粉蜂蜜土豆萝卜洋葱'],
     features: ['昂贵', '高级', '传说', '西式', '适合拍照', '烧烤', '燃起来了'],
     missingFeatures: [],
-    cookingTime: '7.2',
+    cookingTime: 7.2,
     unlock: '【主线】 竹林推进主线获得',
     description:
       '用面粉烘焙出烤火鸡的形状，在表面刷上蜂蜜，肚子里塞满食材，进行充分的烘烤。出炉的假烤鸡有着香脆的外皮和多汁的肉馅。',
@@ -72,22 +83,22 @@ export const dishes = [
   {
     name: '炒肉丝',
     cookware: '油锅',
-    price: '15',
+    price: 15,
     ingredients: ['猪肉'],
     features: ['实惠', '肉', '家常', '重油', '下酒', '中华'],
     missingFeatures: [],
-    cookingTime: '4.8',
+    cookingTime: 4.8,
     unlock: '【支线】 神社：力量涌现的食物解锁',
     description: '以猪肉作为主要食材制作而成的家常菜，口味偏重。',
   },
   {
     name: '臭豆腐',
     cookware: '油锅',
-    price: '24',
+    price: 24,
     ingredients: ['豆腐辣椒'],
     features: ['素', '中华', '猎奇', '辣'],
     missingFeatures: ['甜', '果味'],
-    cookingTime: '3',
+    cookingTime: 3,
     unlock: '【羁绊】 露米娅 1 级',
     description:
       '少见的黑色豆腐，散发着令人难以接近的味道——让人不禁怀疑：这真的可以吃吗？但是实际吃过的人表示根本停不下来。',
@@ -95,11 +106,11 @@ export const dishes = [
   {
     name: '刺身拼盘',
     cookware: '料理台',
-    price: '88',
+    price: 88,
     ingredients: ['三文鱼金枪鱼'],
     features: ['昂贵', '水产', '高级', '和风', '生', '适合拍照'],
     missingFeatures: ['灼热'],
-    cookingTime: '3',
+    cookingTime: 3,
     unlock: '【羁绊】 琪露诺 2 级',
     description:
       '作为和风料理的代表，将刺身级的三文鱼和金枪鱼鱼生配上芥末和酱油，引出鲜味的绝妙料理。',
@@ -107,11 +118,11 @@ export const dishes = [
   {
     name: '大阪烧',
     cookware: '油锅',
-    price: '24',
+    price: 24,
     ingredients: ['面粉鸡蛋萝卜'],
     features: ['和风', '招牌', '适合拍照', '小巧'],
     missingFeatures: [],
-    cookingTime: '3.6',
+    cookingTime: 3.6,
     unlock: '【DLC1】【羁绊】早苗 1 级',
     description:
       '听说的为根据，面糊和各种各样的食材给使用且混合之后在铁板烧制而成的，又脆又香又丰富，万变和平价的特征为因被所有人喜欢涨了。',
@@ -119,11 +130,11 @@ export const dishes = [
   {
     name: '大奢宴',
     cookware: '煮锅',
-    price: '105',
+    price: 105,
     ingredients: ['黑毛猪肉和牛河豚'],
     features: ['昂贵', '肉', '水产', '高级', '饱腹', '山珍'],
     missingFeatures: ['家常', '实惠'],
-    cookingTime: '6',
+    cookingTime: 6,
     unlock: '【羁绊】 灵梦 3 级',
     description:
       '奢侈地选用了一系列高级食材炖煮成烩锅，通过火候的精妙控制，将食材之间的特点全部提炼了出来，肉质鲜嫩多汁，香滑入味，令人其味无穷。',
@@ -131,11 +142,11 @@ export const dishes = [
   {
     name: '豆腐锅',
     cookware: '煮锅',
-    price: '19',
+    price: 19,
     ingredients: ['豆腐'],
     features: ['实惠', '素', '清淡', '和风', '灼热'],
     missingFeatures: [],
-    cookingTime: '3',
+    cookingTime: 3,
     unlock: '【羁绊】 华扇 1 级',
     description:
       '由豆腐炖煮而成的烩锅，滑嫩的口感再加上其本身具有的较高营养价值，使这道平价料理成为居酒屋最常见的烩锅。',
@@ -143,11 +154,11 @@ export const dishes = [
   {
     name: '豆腐味噌',
     cookware: '煮锅',
-    price: '21',
+    price: 21,
     ingredients: ['豆腐'],
     features: ['素', '家常', '清淡', '和风', '汤羹'],
     missingFeatures: ['重油'],
-    cookingTime: '4.2',
+    cookingTime: 4.2,
     unlock: '【羁绊】 阿求 1 级',
     description:
       '居酒屋常见的快手汤羹，使用了豆腐来提鲜，最简单又最原始的美味。',
@@ -155,11 +166,11 @@ export const dishes = [
   {
     name: '二天一流',
     cookware: '烤架',
-    price: '90',
+    price: 90,
     ingredients: ['黑毛猪肉野猪肉'],
     features: ['昂贵', '肉', '高级', '山珍', '文化底蕴', '烧烤', '燃起来了'],
     missingFeatures: ['家常'],
-    cookingTime: '10.8',
+    cookingTime: 10.8,
     unlock: '【羁绊】 萃香 3 级',
     description:
       '传说中与鬼立下赌约并获胜的人类剑士所创下的烤串流派，特别使用了野性十足的肉类烧制而成，食之有种冲天的气魄，让人惊叹不已。',
@@ -167,22 +178,22 @@ export const dishes = [
   {
     name: '饭团',
     cookware: '料理台',
-    price: '6',
+    price: 6,
     ingredients: ['海苔'],
     features: ['实惠', '素', '家常', '饱腹', '和风'],
     missingFeatures: [],
-    cookingTime: '3',
+    cookingTime: 3,
     unlock: '【主等级】 2 级解锁',
     description: '最普通的饭团，加点海带随便捏捏就可以了，超便捷的经典。',
   },
   {
     name: '海鲜味噌汤',
     cookware: '煮锅',
-    price: '8',
+    price: 8,
     ingredients: ['海苔'],
     features: ['实惠', '素', '家常', '汤羹'],
     missingFeatures: ['重油'],
-    cookingTime: '3.6',
+    cookingTime: 3.6,
     unlock: '【初始】',
     description:
       '居酒屋常见的快手汤羹，来历不明却随处可见的海带在幻想乡出现之初，有人好奇水煮了一下，结果意外地发现有种异样的鲜味，从此便在幻想乡流行开了。',
@@ -190,11 +201,11 @@ export const dishes = [
   {
     name: '红烧鳗鱼',
     cookware: '油锅',
-    price: '42',
+    price: 42,
     ingredients: ['八目鳗洋葱'],
     features: ['水产', '素', '重油', '鲜', '招牌'],
     missingFeatures: [],
-    cookingTime: '4.8',
+    cookingTime: 4.8,
     unlock: '【羁绊】 美铃 1 级',
     description:
       '本店招牌。将鳗鱼用特殊酱料进行烧制后肉汁四溢，光闻着香味便让人垂涎不已。',
@@ -202,11 +213,11 @@ export const dishes = [
   {
     name: '华光玉煎包',
     cookware: '油锅',
-    price: '128',
+    price: 128,
     ingredients: ['蘑菇黑毛猪肉'],
     features: ['昂贵', '肉', '高级', '传说', '中华', '菌类', '梦幻'],
     missingFeatures: [],
-    cookingTime: '4.8',
+    cookingTime: 4.8,
     unlock: '【羁绊】 美铃 3 级',
     description:
       '散发着七彩的气场的高级生煎包。据说有些生煎原教旨主义者尖锐地反对加入猪肉以外食材的做法。',
@@ -214,11 +225,11 @@ export const dishes = [
   {
     name: '幻昙花糕',
     cookware: '蒸锅',
-    price: '78',
+    price: 78,
     ingredients: ['幻昙华露水'],
     features: ['昂贵', '高级', '传说', '甜', '适合拍照', '梦幻'],
     missingFeatures: ['肉', '水产'],
-    cookingTime: '4.2',
+    cookingTime: 4.2,
     unlock: '【羁绊】 莉格露 3 级',
     description:
       '用上古时期便存在的奇迹之花制作的糕点，不仅甜而不腻，食后更是齿颊留香，据说能勾起人心中最想怀念的回忆。',
@@ -226,11 +237,11 @@ export const dishes = [
   {
     name: '黄油牛排',
     cookware: '油锅',
-    price: '60',
+    price: 60,
     ingredients: ['和牛黄油'],
     features: ['肉', '重油', '饱腹', '西式'],
     missingFeatures: ['甜', '凉爽'],
-    cookingTime: '4.2',
+    cookingTime: 4.2,
     unlock: '【主线】 红魔馆推进主线获得',
     description:
       '简单而复杂，根据火候和食材的选择，呈现出不同感觉到基础西餐。顺带一提红魔馆的那位指的应该还是蕾米莉亚·斯卡雷特喜欢的是三分熟。',
@@ -238,11 +249,11 @@ export const dishes = [
   {
     name: '惠灵顿牛排',
     cookware: '油锅',
-    price: '150',
+    price: 150,
     ingredients: ['和牛面粉鸡蛋黄油松露'],
     features: ['昂贵', '肉', '高级', '传说', '山珍', '西式'],
     missingFeatures: ['甜', '凉爽'],
-    cookingTime: '8.4',
+    cookingTime: 8.4,
     unlock: '【羁绊】 帕秋莉 3 级',
     description:
       '将牛排和松露这两种鲜美的食材调味后包裹在酥皮中进行烘焙，让黄油酥皮的香味和牛排蘑菇的鲜美充分融合的极致菜肴。工序繁复，在外界是出了名的难做。',
@@ -250,11 +261,11 @@ export const dishes = [
   {
     name: '烤八目鳗',
     cookware: '烤架',
-    price: '22',
+    price: 22,
     ingredients: ['八目鳗'],
     features: ['水产', '招牌', '烧烤'],
     missingFeatures: ['肉', '素'],
-    cookingTime: '4.2',
+    cookingTime: 4.2,
     unlock: '【初始】',
     description:
       '本店招牌。为了打破红灯笼店就是烤鸟肉店的成见，特意选择了对夜盲症有奇效的八目鳗，据说在过去还被视作珍宝。',
@@ -262,11 +273,11 @@ export const dishes = [
   {
     name: '烤蘑菇',
     cookware: '烤架',
-    price: '18',
+    price: 18,
     ingredients: ['蘑菇'],
     features: ['实惠', '素', '咸', '灼热', '菌类', '烧烤'],
     missingFeatures: [],
-    cookingTime: '3.6',
+    cookingTime: 3.6,
     unlock: '【支线】 兽道：年纪大了解锁',
     description:
       '采用蘑菇为原料，经过腌渍、裹粉、油炸，虽然是素食，但味道和肉不相上下。',
@@ -274,22 +285,22 @@ export const dishes = [
   {
     name: '冷豆腐',
     cookware: '料理台',
-    price: '21',
+    price: 21,
     ingredients: ['萝卜豆腐'],
     features: ['素', '家常', '清淡', '下酒', '小巧'],
     missingFeatures: [],
-    cookingTime: '3',
+    cookingTime: 3,
     unlock: '【初始】',
     description: '夏天的消暑下酒菜，简单爽口。',
   },
   {
     name: '力量汤',
     cookware: '煮锅',
-    price: '34',
+    price: 34,
     ingredients: ['海苔野猪肉'],
     features: ['肉', '山珍', '灼热', '力量涌现', '汤羹'],
     missingFeatures: ['小巧', '凉爽'],
-    cookingTime: '7.2',
+    cookingTime: 7.2,
     unlock: '【羁绊】 橙 3 级',
     description:
       '荤素搭配的美味汤羹，使用了野猪肉和海带㷛煮而成，能最快捷地补充身体所需能量。',
@@ -297,33 +308,33 @@ export const dishes = [
   {
     name: '凉菜雕花',
     cookware: '料理台',
-    price: '20',
+    price: 20,
     ingredients: ['萝卜'],
     features: ['素', '清淡', '适合拍照', '凉爽'],
     missingFeatures: ['肉', '灼热'],
-    cookingTime: '3',
+    cookingTime: 3,
     unlock: '【羁绊】 天子 1 级',
     description: '将鲜果蔬菜雕刻成鲜花的模样，虽然材料简单，但却非常考验刀工。',
   },
   {
     name: '流水素面',
     cookware: '料理台',
-    price: '40',
+    price: 40,
     ingredients: ['面粉竹子'],
     features: ['素', '清淡', '凉爽', '不可思议'],
     missingFeatures: ['重油'],
-    cookingTime: '4.2',
+    cookingTime: 4.2,
     unlock: '【支线】 竹林：料理上的一些疑惑',
     description: '比起好吃，流水素面更多的是好玩。',
   },
   {
     name: '露水煮蛋',
     cookware: '蒸锅',
-    price: '18',
+    price: 18,
     ingredients: ['露水鸡蛋'],
     features: ['实惠', '清淡', '生'],
     missingFeatures: ['肉', '水产', '重油'],
-    cookingTime: '1.8',
+    cookingTime: 1.8,
     unlock: '【羁绊】 莉格露 1 级',
     description:
       '采集了清晨的露珠煮成的蛋，比一般的水煮蛋多出了一种甘甜的味道，为了保持鲜嫩只煮到半熟，蛋黄水嫩得似乎稍加晃动就会流出来。',
@@ -331,11 +342,11 @@ export const dishes = [
   {
     name: '麻婆豆腐',
     cookware: '油锅',
-    price: '32',
+    price: 32,
     ingredients: ['豆腐猪肉辣椒'],
     features: ['素', '中华', '灼热', '辣'],
     missingFeatures: ['甜', '果味', '凉爽'],
-    cookingTime: '3.6',
+    cookingTime: 3.6,
     unlock: '【羁绊】 妹红 1 级',
     description:
       '在日本很有名的中华料理。使用独特的豆腐烹饪技巧烹制而成的辛辣料理，用它来拌饭吃可是会上瘾的哦～',
@@ -343,22 +354,22 @@ export const dishes = [
   {
     name: '麻薯',
     cookware: '料理台',
-    price: '30',
+    price: 30,
     ingredients: ['糯米'],
     features: ['和风', '甜', '小巧'],
     missingFeatures: ['肉', '水产', '咸', '鲜'],
-    cookingTime: '4.2',
+    cookingTime: 4.2,
     unlock: '【羁绊】 帝 1 级',
     description: '最普通的糯米团子，大家都喜欢的和风甜食。',
   },
   {
     name: '毛玉熔岩豆腐',
     cookware: '料理台',
-    price: '85',
+    price: 85,
     ingredients: ['豆腐牛肉洋葱辣椒'],
     features: ['昂贵', '素', '中华', '鲜', '适合拍照', '不可思议'],
     missingFeatures: [],
-    cookingTime: '4.8',
+    cookingTime: 4.8,
     unlock: '【商店】 萌澄果商店，香霖堂',
     description:
       '方形的火山毛玉造型，仿佛着了火的熔岩豆腐，是 MC 幻想乡非常著名的特色料理，受到喜欢舌苔刺激的人的追捧。',
@@ -366,11 +377,11 @@ export const dishes = [
   {
     name: '毛玉三色冰激凌',
     cookware: '料理台',
-    price: '75',
+    price: 75,
     ingredients: ['露水蜂蜜豆腐鸡蛋'],
     features: ['昂贵', '西式', '甜', '适合拍照', '凉爽', '梦幻'],
     missingFeatures: [],
-    cookingTime: '4.8',
+    cookingTime: 4.8,
     unlock: '【商店】 萌澄果商店，香霖堂',
     description:
       '方形的三色毛玉冰淇淋，从颜色到口味上都非常惹人喜爱。去 MC 幻想乡旅游时，几乎是人手一份的招牌甜品。',
@@ -378,11 +389,11 @@ export const dishes = [
   {
     name: '秘制小鱼干',
     cookware: '料理台',
-    price: '30',
+    price: 30,
     ingredients: ['鳟鱼'],
     features: ['水产', '咸', '鲜', '小巧'],
     missingFeatures: [],
-    cookingTime: '4.8',
+    cookingTime: 4.8,
     unlock: '【羁绊】 橙 1 级',
     description:
       '用秘制的香料将小鱼干腌制后晒干，酥脆想口的同时又易于保存，寻常人家都喜欢在家中保存一份。',
@@ -390,11 +401,11 @@ export const dishes = [
   {
     name: '蜜汁叉烧',
     cookware: '烤架',
-    price: '70',
+    price: 70,
     ingredients: ['猪肉蜂蜜'],
     features: ['昂贵', '肉', '重油', '中华', '甜', '不可思议'],
     missingFeatures: [],
-    cookingTime: '4.2',
+    cookingTime: 4.2,
     unlock: '【支线】 红魔馆：美铃的家乡菜解锁',
     description:
       '来自红美铃老家的特殊做法，制作工序有点繁复，但是口感独一无二，令人难忘。',
@@ -402,11 +413,11 @@ export const dishes = [
   {
     name: '蘑菇肉片',
     cookware: '油锅',
-    price: '20',
+    price: 20,
     ingredients: ['蘑菇猪肉'],
     features: ['肉', '家常', '重油', '菌类'],
     missingFeatures: [],
-    cookingTime: '3.6',
+    cookingTime: 3.6,
     unlock: '【DLC1】【羁绊】魔理沙 1 级',
     description:
       '蘑菇和肉给切片之后，往锅的里面混入且一起炒，非常基本的家庭料理的一个',
@@ -414,11 +425,11 @@ export const dishes = [
   {
     name: '奶油炖菜',
     cookware: '蒸锅',
-    price: '20',
+    price: 20,
     ingredients: ['蘑菇洋葱黄油'],
     features: ['素', '西式', '菌类', '汤羹'],
     missingFeatures: [],
-    cookingTime: '5.4',
+    cookingTime: 5.4,
     unlock: '【主等级】 24 级解锁',
     description:
       '制作家常奶油浓汤，制作方法简单，无论是蘸面包还是当做炖菜来吃都是非常不错的料理。',
@@ -426,11 +437,11 @@ export const dishes = [
   {
     name: '能量串',
     cookware: '烤架',
-    price: '50',
+    price: 50,
     ingredients: ['牛肉洋葱南瓜'],
     features: ['肉', '饱腹', '烧烤'],
     missingFeatures: [],
-    cookingTime: '7.2',
+    cookingTime: 7.2,
     unlock: '【羁绊】 萃香 2 级',
     description:
       '牛肉搭配洋葱、南瓜烤成的串串。巧妙地利用了洋葱的刺激与南瓜的甜味去除肉质的油腻，食之更加清爽。',
@@ -438,11 +449,11 @@ export const dishes = [
   {
     name: '牛肉盖浇饭',
     cookware: '煮锅',
-    price: '20',
+    price: 20,
     ingredients: ['牛肉'],
     features: ['肉', '家常', '饱腹'],
     missingFeatures: [],
-    cookingTime: '4.2',
+    cookingTime: 4.2,
     unlock: '【羁绊】 华扇 2 级',
     description:
       '常见的家常菜，看上去颗颗饭粒饱满，淋上的香酱与牛肉的口感融为一体，令人口味倍增。',
@@ -450,11 +461,11 @@ export const dishes = [
   {
     name: '蓬莱玉枝',
     cookware: '烤架',
-    price: '125',
+    price: 125,
     ingredients: ['和牛三文鱼猪肉鹿肉竹子'],
     features: ['昂贵', '肉', '高级', '传说', '文化底蕴', '烧烤'],
     missingFeatures: [],
-    cookingTime: '7.8',
+    cookingTime: 7.8,
     unlock: '【羁绊】 辉夜 3 级',
     description:
       '简单地说就是使用竹签串起各种高级肉类，一口吃个饱的料理。但是在辉夜小姐的胁迫下，成为了高级的冠名料理。',
@@ -462,18 +473,18 @@ export const dishes = [
   {
     name: '热松饼',
     cookware: '油锅',
-    price: '22',
+    price: 22,
     ingredients: ['蜂蜜面粉鸡蛋'],
     features: ['饱腹', '西式', '甜'],
     missingFeatures: [],
-    cookingTime: '5.4',
+    cookingTime: 5.4,
     unlock: '【主等级】 27 级解锁',
     description: '早餐的简单选择，将准备好的面糊煎熟，浇上蜂蜜就可以吃了。',
   },
   {
     name: '赛熊掌',
     cookware: '蒸锅',
-    price: '70',
+    price: 70,
     ingredients: ['黑毛猪肉河豚竹笋'],
     features: [
       '昂贵',
@@ -486,7 +497,7 @@ export const dishes = [
       '不可思议',
     ],
     missingFeatures: [],
-    cookingTime: '7.2',
+    cookingTime: 7.2,
     unlock: '【羁绊】 露米娅 3 级',
     description:
       '黑不溜秋的怪异美食之首！香飘万里，让人回味无穷。因为打不过熊，没法直接用熊掌做，但是比真正的熊掌还要鲜美百倍。',
@@ -494,11 +505,11 @@ export const dishes = [
   {
     name: '诗礼银杏',
     cookware: '蒸锅',
-    price: '60',
+    price: 60,
     ingredients: ['白果蜂蜜'],
     features: ['素', '中华', '甜', '文化底蕴'],
     missingFeatures: ['咸'],
-    cookingTime: '4.8',
+    cookingTime: 4.8,
     unlock: '【羁绊】 慧音 2 级',
     description:
       '以选用孔庙“诗礼堂”前银杏树所结果实烹制而得名，清香甜美，柔韧筋道，可解酒止咳。',
@@ -506,11 +517,11 @@ export const dishes = [
   {
     name: '蔬菜专辑',
     cookware: '料理台',
-    price: '56',
+    price: 56,
     ingredients: ['土豆南瓜洋葱'],
     features: ['素', '清淡', '生', '凉爽'],
     missingFeatures: ['肉', '水产', '灼热'],
-    cookingTime: '3',
+    cookingTime: 3,
     unlock: '【羁绊】 阿求 2 级',
     description:
       '用新鲜的蔬菜生拌而成的沙拉，口感清新，可以去除嘴里的油腻。不知为何被年轻的姑娘们奉为减肥圣餐。',
@@ -518,11 +529,11 @@ export const dishes = [
   {
     name: '水饺',
     cookware: '煮锅',
-    price: '30',
+    price: 30,
     ingredients: ['面粉'],
     features: ['素', '家常', '中华', '文化底蕴'],
     missingFeatures: [],
-    cookingTime: '3',
+    cookingTime: 3,
     unlock: '2022 元旦剧情',
     description:
       '在海的另一边，红美铃小姐的家乡的著名的食谱，用面粉制作且来的筋道的面皮，在此之中将任意喜欢的食材往里面包入，再往沸腾的热的水那里放入且煮熟，就往超级美味的食物这个给成为了，只要将外表给看的话是朴素无华，内里把世间的宝藏给包着。',
@@ -530,11 +541,11 @@ export const dishes = [
   {
     name: '水煮鱼',
     cookware: '煮锅',
-    price: '68',
+    price: 68,
     ingredients: ['鳟鱼辣椒'],
     features: ['昂贵', '水产', '中华', '灼热', '辣', '燃起来了'],
     missingFeatures: ['甜', '果味', '凉爽', '肉'],
-    cookingTime: '4.8',
+    cookingTime: 4.8,
     unlock: '【羁绊】 妹红 2 级',
     description:
       '正宗的四川中华料理。鲜嫩肥美的鱼肉与犹如半天朱霞的辣椒一起翻滚，煮成了一道鱼香四溢，椒味袭人的绝味。',
@@ -542,22 +553,22 @@ export const dishes = [
   {
     name: '司康饼',
     cookware: '蒸锅',
-    price: '8',
+    price: 8,
     ingredients: ['黄油面粉'],
     features: ['实惠', '饱腹', '西式'],
     missingFeatures: [],
-    cookingTime: '4.2',
+    cookingTime: 4.2,
     unlock: '【主等级】 18 级解锁',
     description: '英式下午茶的常客，外酥内软。一般蘸着果酱或者奶油一起吃。',
   },
   {
     name: '汤圆',
     cookware: '煮锅',
-    price: '30',
+    price: 30,
     ingredients: ['糯米'],
     features: ['素', '家常', '中华', '文化底蕴'],
     missingFeatures: [],
-    cookingTime: '3',
+    cookingTime: 3,
     unlock: '2022 元旦剧情',
     description:
       '在海的另一边，红美铃小姐的家乡的著名的食谱，用糯米揉且成的小的团，在此之中将甜的食材给包入，再往沸腾的热的水那里放入且煮熟，就往超级甜又可口的小吃成为，只要将外表给看的话是朴素无华，内里把世间的甜蜜给包着。',
@@ -565,11 +576,11 @@ export const dishes = [
   {
     name: '桃花羹',
     cookware: '煮锅',
-    price: '55',
+    price: 55,
     ingredients: ['桃子露水冰块'],
     features: ['素', '甜', '适合拍照', '凉爽', '果味', '汤羹'],
     missingFeatures: [],
-    cookingTime: '4.2',
+    cookingTime: 4.2,
     unlock: '【羁绊】 天子 2 级',
     description:
       '来自天上的配方，采摘新鲜的桃花，配以清晨的甘露水煮而成，不仅芳香清甜，而且具有祛病美容的神奇功效。',
@@ -577,11 +588,11 @@ export const dishes = [
   {
     name: '土豆可乐饼',
     cookware: '油锅',
-    price: '22',
+    price: 22,
     ingredients: ['土豆'],
     features: ['素', '家常', '重油'],
     missingFeatures: ['凉爽'],
-    cookingTime: '3.6',
+    cookingTime: 3.6,
     unlock: '【主等级】 11 级解锁',
     description:
       '主要由土豆制成的，外表酥脆内在绵软可口，在油炸类食品中有较高的人气。',
@@ -589,11 +600,11 @@ export const dishes = [
   {
     name: '豚骨拉面',
     cookware: '煮锅',
-    price: '60',
+    price: 60,
     ingredients: ['猪肉鸡蛋海苔'],
     features: ['肉', '家常', '饱腹', '咸'],
     missingFeatures: [],
-    cookingTime: '4.8',
+    cookingTime: 4.8,
     unlock: '【主等级】 14 级解锁',
     description:
       '用猪肉和蔬菜经过长时间熬制出来的高汤，堪称整碗拉面的精髓和灵魂所在。香浓醇厚的豚骨汤底配上香弹可口的拉面，饱腹之余也让舌尖得到最大的满足。',
@@ -601,11 +612,11 @@ export const dishes = [
   {
     name: '温暖饭团',
     cookware: '料理台',
-    price: '30',
+    price: 30,
     ingredients: ['洋葱鳟鱼'],
     features: ['水产', '素', '家常', '饱腹', '和风', '灼热'],
     missingFeatures: [],
-    cookingTime: '4.8',
+    cookingTime: 4.8,
     unlock: '【羁绊】 灵梦 1 级',
     description:
       '常见的平价饭团，内陷加入了鳟鱼和洋葱，融合了海鲜的细腻口感与洋葱的炽热，无论是营养还是口感都属上佳。',
@@ -613,11 +624,11 @@ export const dishes = [
   {
     name: '无意识妖怪慕斯',
     cookware: '料理台',
-    price: '60',
+    price: 60,
     ingredients: ['豆腐蜂蜜洋葱黄油'],
     features: ['高级', '西式', '甜', '适合拍照', '梦幻'],
     missingFeatures: [],
-    cookingTime: '4.8',
+    cookingTime: 4.8,
     unlock: '【商店】 三妖精商店',
     description:
       '以「无意识妖怪」的帽子为原型制作的深沉甜食，即使切开感受到的也是无尽的黑暗，但香醇程度令人流连忘返，是「三妖精的蹦蹦跳跳讨伐大作战」世界传来的珍贵料理。',
@@ -625,11 +636,11 @@ export const dishes = [
   {
     name: '香煎三文鱼',
     cookware: '油锅',
-    price: '58',
+    price: 58,
     ingredients: ['三文鱼竹笋'],
     features: ['肉', '西式', '鲜'],
     missingFeatures: [],
-    cookingTime: '6',
+    cookingTime: 6,
     unlock: '【主等级】 21 级解锁',
     description:
       '将整块带皮的三文鱼煎至外焦里嫩，配上鲜嫩的竹笋——不过外界这个菜谱一般是芦笋，这也算是幻想乡式的融合菜吧。',
@@ -637,11 +648,11 @@ export const dishes = [
   {
     name: '香炸蝉蜕',
     cookware: '油锅',
-    price: '19',
+    price: 19,
     ingredients: ['蝉蜕'],
     features: ['实惠', '重油', '猎奇'],
     missingFeatures: [],
-    cookingTime: '4.8',
+    cookingTime: 4.8,
     unlock: '【羁绊】 莉格露 2 级',
     description:
       '蝉科的昆虫黑蚱羽化后的蜕壳，可以入药，有利咽开音，明目退翳 yì 之效，香炸后口感酥脆，颇受欢迎。',
@@ -649,11 +660,11 @@ export const dishes = [
   {
     name: '猩红恶魔蛋糕',
     cookware: '料理台',
-    price: '60',
+    price: 60,
     ingredients: ['露水南瓜土豆蜂蜜'],
     features: ['西式', '甜', '适合拍照', '猎奇', '梦幻'],
     missingFeatures: [],
-    cookingTime: '4.8',
+    cookingTime: 4.8,
     unlock: '【商店】 三妖精商店',
     description:
       '以猩红恶魔头上的帽子为原型制作的梦幻甜食，切开会有仿佛血液一般的甜美酱料流出，是「三妖精的蹦蹦跳跳讨伐大作战」世界传来的珍贵料理。',
@@ -661,7 +672,7 @@ export const dishes = [
   {
     name: '岩浆',
     cookware: '煮锅',
-    price: '125',
+    price: 125,
     ingredients: ['和牛河豚松露牛肉'],
     features: [
       '昂贵',
@@ -674,7 +685,7 @@ export const dishes = [
       '菌类',
     ],
     missingFeatures: ['凉爽'],
-    cookingTime: '4.8',
+    cookingTime: 4.8,
     unlock: '【羁绊】 妹红 3 级',
     description:
       '用高级牛肉和松露炖煮而成的烩锅，最初以麻辣为特色，因炖煮中冒出的气泡如岩浆而得名，款款而起的香味更是让人食指大动。改良后也增加了不辣的版本。',
@@ -682,11 +693,11 @@ export const dishes = [
   {
     name: '野味加农',
     cookware: '煮锅',
-    price: '66',
+    price: 66,
     ingredients: ['土豆南瓜黑毛猪肉'],
     features: ['昂贵', '肉', '重油', '饱腹', '山珍', '灼热'],
     missingFeatures: [],
-    cookingTime: '4.8',
+    cookingTime: 4.8,
     unlock: '【羁绊】 华扇 3 级',
     description:
       '用农家蔬菜佐以优质黑毛猪肉炖煮的烩锅，口感饱满，香浓却不油腻，是农家人最高级的大菜。',
@@ -694,11 +705,11 @@ export const dishes = [
   {
     name: '意式烩饭',
     cookware: '蒸锅',
-    price: '70',
+    price: 70,
     ingredients: ['洋葱竹笋蘑菇黄油'],
     features: ['昂贵', '饱腹', '西式', '鲜', '菌类'],
     missingFeatures: ['甜'],
-    cookingTime: '3.6',
+    cookingTime: 3.6,
     unlock: '【羁绊】 帕秋莉 2 级',
     description:
       '将食材炒熟之后倒入生米，充分混合米粒和食材香味的外界某个半岛的做法。',
@@ -706,11 +717,11 @@ export const dishes = [
   {
     name: '樱落雪',
     cookware: '料理台',
-    price: '50',
+    price: 50,
     ingredients: ['极上金枪鱼'],
     features: ['水产', '高级', '海味', '和风', '生', '适合拍照', '小巧'],
     missingFeatures: ['重油'],
-    cookingTime: '7.2',
+    cookingTime: 7.2,
     unlock: '【羁绊】 阿求 3 级',
     description:
       '高级寿司的一种，粉红色的高级生鱼片盖在白米饭上，就如樱花飘落在白雪上，有着不可思议的美感。',
@@ -718,22 +729,22 @@ export const dishes = [
   {
     name: '油豆腐',
     cookware: '油锅',
-    price: '16',
+    price: 16,
     ingredients: ['豆腐'],
     features: ['实惠', '素', '家常', '重油', '和风'],
     missingFeatures: [],
-    cookingTime: '4.2',
+    cookingTime: 4.2,
     unlock: '【羁绊】 慧音 1 级',
     description: '常见的家常菜，传说中是稻荷神的狐狸使者最喜欢的食物。',
   },
   {
     name: '月光团子',
     cookware: '料理台',
-    price: '80',
+    price: 80,
     ingredients: ['月光草糯米'],
     features: ['昂贵', '和风', '甜', '不可思议', '特产'],
     missingFeatures: ['肉', '鲜', '咸', '水产'],
-    cookingTime: '4.8',
+    cookingTime: 4.8,
     unlock: '【羁绊】 帝 3 级',
     description:
       '永远亭特产改良的麻薯团子，加入了高级食材月光草，造型可爱的同时，还有“月光一样的口感”。',
@@ -741,11 +752,11 @@ export const dishes = [
   {
     name: '月之恋人',
     cookware: '料理台',
-    price: '66',
+    price: 66,
     ingredients: ['黄油面粉鸡蛋月光草'],
     features: ['昂贵', '甜', '适合拍照', '小巧', '特产'],
     missingFeatures: ['肉', '水产', '素'],
-    cookingTime: '6',
+    cookingTime: 6,
     unlock: '【羁绊】 辉夜 2 级',
     description:
       '外界似乎很流行使用 □□ 恋人作为地区伴手礼，永远亭也不甘落后潮流，推出了自己的版本！',
@@ -753,11 +764,11 @@ export const dishes = [
   {
     name: '杂炊',
     cookware: '煮锅',
-    price: '40',
+    price: 40,
     ingredients: ['海苔豆腐鳟鱼'],
     features: ['肉', '家常', '鲜', '灼热'],
     missingFeatures: [],
-    cookingTime: '3',
+    cookingTime: 3,
     unlock: '【羁绊】 灵梦 2 级',
     description:
       '使用一些边角料食材杂烩而成的烩锅，享受美味的同时还能避免浪费，可谓一举两得。',
@@ -765,11 +776,11 @@ export const dishes = [
   {
     name: '炸八目鳗',
     cookware: '油锅',
-    price: '27',
+    price: 27,
     ingredients: ['八目鳗'],
     features: ['水产', '重油', '招牌'],
     missingFeatures: ['凉爽'],
-    cookingTime: '4.2',
+    cookingTime: 4.2,
     unlock: '【羁绊】 露米娅 2 级',
     description:
       '本店招牌。长相怪异的八目鳗在喜欢尝鲜的幻想乡曾一度成为话题，油炸后爽滑酥嫩，深受大众喜爱。',
@@ -777,11 +788,11 @@ export const dishes = [
   {
     name: '炸猪肉排',
     cookware: '油锅',
-    price: '25',
+    price: 25,
     ingredients: ['猪肉'],
     features: ['肉', '家常', '重油', '饱腹'],
     missingFeatures: [],
-    cookingTime: '4.2',
+    cookingTime: 4.2,
     unlock: '【羁绊】 萃香 1 级',
     description:
       '常见的家常菜，以猪肉为主要材料，裹以面粉一炸，邻居家的孩子都馋哭了。',
@@ -789,11 +800,11 @@ export const dishes = [
   {
     name: '真·海鲜味噌汤',
     cookware: '煮锅',
-    price: '55',
+    price: 55,
     ingredients: ['三文鱼鳟鱼'],
     features: ['水产', '家常', '清淡', '汤羹'],
     missingFeatures: [],
-    cookingTime: '4.8',
+    cookingTime: 4.8,
     unlock: '【羁绊】 琪露诺 1 级',
     description:
       '选用新鲜鳟鱼与海带㷛煮而成的味增汤，浓浓的鲜味四处飘荡，鲜而不腥。',
@@ -801,11 +812,11 @@ export const dishes = [
   {
     name: '炙猪肉饭团',
     cookware: '料理台',
-    price: '14',
+    price: 14,
     ingredients: ['猪肉'],
     features: ['实惠', '肉', '家常', '饱腹', '和风'],
     missingFeatures: [],
-    cookingTime: '3.6',
+    cookingTime: 3.6,
     unlock: '【支线】 人里：私塾盒饭供应解锁',
     description:
       '常见的平价饭团，在饭团中放入烤制后的猪肉，为其增加了一份香浓的嚼劲。',
@@ -813,11 +824,11 @@ export const dishes = [
   {
     name: '猪鹿蝶',
     cookware: '蒸锅',
-    price: '78',
+    price: 78,
     ingredients: ['野猪肉鹿肉月光草'],
     features: ['昂贵', '肉', '高级', '文化底蕴'],
     missingFeatures: [],
-    cookingTime: '4.8',
+    cookingTime: 4.8,
     unlock: '【羁绊】 琪露诺 3 级',
     description:
       '脱胎于花礼的猪鹿蝶牌型，将猪肉和鹿肉清炖，佐以花朵引出食材本身鲜味的精致料理。',
@@ -825,11 +836,11 @@ export const dishes = [
   {
     name: '猪肉盖浇饭',
     cookware: '煮锅',
-    price: '20',
+    price: 20,
     ingredients: ['猪肉'],
     features: ['肉', '家常', '饱腹'],
     missingFeatures: [],
-    cookingTime: '4.2',
+    cookingTime: 4.2,
     unlock: '【主等级】 8 级解锁',
     description:
       '常见的家常菜，看上去颗颗饭粒饱满，淋上的香酱与猪肉的口感融为一体，令人口感倍增。',
@@ -837,11 +848,11 @@ export const dishes = [
   {
     name: '猪肉鳟鱼熏',
     cookware: '烤架',
-    price: '26',
+    price: 26,
     ingredients: ['猪肉鳟鱼'],
     features: ['肉', '水产', '家常', '烧烤'],
     missingFeatures: [],
-    cookingTime: '4.2',
+    cookingTime: 4.2,
     unlock: '【羁绊】 橙 2 级',
     description:
       '把猪肉鳟鱼放在一起熏制而成，是简单好吃的肉食料理，也比较能保存。',
@@ -849,7 +860,7 @@ export const dishes = [
   {
     name: '竹取姬',
     cookware: '蒸锅',
-    price: '65',
+    price: 65,
     ingredients: ['竹子竹笋松露黑毛猪肉白果'],
     features: [
       '昂贵',
@@ -862,7 +873,7 @@ export const dishes = [
       '特产',
     ],
     missingFeatures: [],
-    cookingTime: '7.2',
+    cookingTime: 7.2,
     unlock: '【主线】 竹林推进主线获得',
     description:
       '在永远亭就地取材，使用新鲜的食材和米饭一起塞进竹筒中蒸熟。饭被竹子的清香充分浸润后，中和了山猪肉带来的油腻。',
@@ -870,35 +881,35 @@ export const dishes = [
   {
     name: '竹笋炒肉',
     cookware: '油锅',
-    price: '25',
+    price: 25,
     ingredients: ['竹笋猪肉'],
     features: ['肉', '家常', '下酒'],
     missingFeatures: [],
-    cookingTime: '6',
+    cookingTime: 6,
     unlock: '【主等级】 33 级解锁',
     description: '最朴素的竹笋的吃法，由猪肉的油光引出的竹笋的鲜美。',
   },
   {
     name: '竹筒蒸蛋',
     cookware: '蒸锅',
-    price: '40',
+    price: 40,
     ingredients: ['竹子鸡蛋海苔蘑菇'],
     features: ['家常', '清淡', '菌类'],
     missingFeatures: [],
-    cookingTime: '3.6',
+    cookingTime: 3.6,
     unlock: '【羁绊】 辉夜 1 级',
     description: '竹子作为容器蒸出来的茶碗蒸，别有一番风味。',
   },
   {
     name: '煮豆腐',
     cookware: '煮锅',
-    price: '22',
+    price: 22,
     ingredients: ['豆腐'],
     features: ['素', '家常', '清淡'],
     missingFeatures: [],
-    cookingTime: '4.2',
+    cookingTime: 4.2,
     unlock: '【主等级】 4 级解锁',
     description:
       '常见的家常菜，但也讲究烧制的火候，才能将豆腐的鲜嫩口感得到最大展现。',
   },
-] as const;
+] as Dish[];

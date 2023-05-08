@@ -1,7 +1,7 @@
 export type Guest = DeepReadonly<{
   name: string;
   locations: string[];
-  balance?: string;
+  balance: number[];
   likedDishTraits: string[];
   unlikedDishTraits?: string[];
   likedBeverageTraits: string[];
@@ -11,7 +11,7 @@ export const guests = [
   {
     name: '爱丽丝',
     locations: ['魔法森林'],
-    balance: '500-800',
+    balance: [500, 800],
     likedDishTraits: ['家常', '高级', '文化底蕴', '甜', '西式'],
     unlikedDishTraits: ['肉', '饱腹', '重油', '猎奇'],
     likedBeverageTraits: ['低酒精', '西洋酒', '现代'],
@@ -45,7 +45,7 @@ export const guests = [
   {
     name: '稗田阿求',
     locations: ['人类村落'],
-    balance: '500-800',
+    balance: [500, 800],
     likedDishTraits: [
       '和风',
       '甜',
@@ -79,7 +79,7 @@ export const guests = [
   {
     name: '比那名居天子',
     locations: ['博丽神社', '妖怪之山'],
-    balance: '2000-3000',
+    balance: [2000, 3000],
     likedDishTraits: [
       '素',
       '清淡',
@@ -97,7 +97,7 @@ export const guests = [
   {
     name: '博丽灵梦',
     locations: ['博丽神社', '人类村落', '魔法森林'],
-    balance: '150-300',
+    balance: [150, 300],
     likedDishTraits: ['实惠', '饱腹', '甜', '不可思议', '高级', '流行·喜爱'],
     unlikedDishTraits: ['昂贵', '下酒', '流行·厌恶'],
     likedBeverageTraits: ['无酒精', '可加热', '低酒精'],
@@ -106,7 +106,7 @@ export const guests = [
   {
     name: '橙',
     locations: ['妖怪兽道'],
-    balance: '400-600',
+    balance: [400, 600],
     likedDishTraits: ['肉', '水产', '烧烤', '甜', '重油', '流行·喜爱'],
     unlikedDishTraits: ['素', '灼热', '猎奇', '流行·厌恶'],
     likedBeverageTraits: ['水果', '辛'],
@@ -115,7 +115,7 @@ export const guests = [
   {
     name: '茨木华扇',
     locations: ['人类村落'],
-    balance: '400-600',
+    balance: [400, 600],
     likedDishTraits: ['文化底蕴', '家常', '下酒', '和风'],
     unlikedDishTraits: ['实惠', '生', '辣'],
     likedBeverageTraits: ['中酒精', '古典', '直饮'],
@@ -124,7 +124,7 @@ export const guests = [
   {
     name: '村纱水蜜',
     locations: ['命莲寺'],
-    balance: '400-600',
+    balance: [400, 600],
     likedDishTraits: ['咸', '特产', '力量涌现', '鲜', '肉', '高级', '饱腹'],
     unlikedDishTraits: ['素', '小巧', '猎奇', '酸'],
     likedBeverageTraits: ['辛', '高酒精', '可加冰', '西洋酒'],
@@ -180,7 +180,7 @@ export const guests = [
   {
     name: '东风谷早苗',
     locations: ['妖怪之山', '魔法森林'],
-    balance: '400-600',
+    balance: [400, 600],
     likedDishTraits: ['和风', '梦幻', '适合拍照', '甜', '家常', '流行·喜爱'],
     unlikedDishTraits: ['猎奇', '生', '重油', '灼热'],
     likedBeverageTraits: [
@@ -199,7 +199,7 @@ export const guests = [
   {
     name: '多多良小伞',
     locations: ['命莲寺'],
-    balance: '150-900',
+    balance: [150, 900],
     likedDishTraits: [
       '甜',
       '家常',
@@ -217,7 +217,7 @@ export const guests = [
   {
     name: '封兽鵺',
     locations: ['命莲寺'],
-    balance: '300-500',
+    balance: [300, 500],
     likedDishTraits: [
       '鲜',
       '不可思议',
@@ -252,7 +252,7 @@ export const guests = [
   {
     name: '古明地觉',
     locations: ['地灵殿'],
-    balance: '500-600',
+    balance: [500, 600],
     likedDishTraits: ['小巧', '甜', '梦幻', '特产', '家常', '力量涌现'],
     unlikedDishTraits: ['肉', '山珍', '灼热', '猎奇', '大份'],
     likedBeverageTraits: ['气泡', '提神', '苦', '无酒精'],
@@ -295,7 +295,7 @@ export const guests = [
   {
     name: '河城荷取',
     locations: ['妖怪之山'],
-    balance: '400-500',
+    balance: [400, 500],
     likedDishTraits: ['高级', '下酒', '咸', '招牌', '水产', '猎奇'],
     unlikedDishTraits: ['素', '文化底蕴', '山珍'],
     likedBeverageTraits: ['直饮', '高酒精', '中酒精', '清酒'],
@@ -320,7 +320,7 @@ export const guests = [
   {
     name: '黑谷山女',
     locations: ['旧地狱'],
-    balance: '250-400',
+    balance: [250, 400],
     likedDishTraits: ['猎奇', '甜', '适合拍照', '生', '鲜', '流行·喜爱'],
     unlikedDishTraits: ['重油', '灼热', '咸'],
     likedBeverageTraits: ['低酒精', '中酒精', '啤酒', '甘'],
@@ -329,7 +329,7 @@ export const guests = [
   {
     name: '红美铃',
     locations: ['红魔馆'],
-    balance: '200-400',
+    balance: [200, 400],
     likedDishTraits: ['中华', '肉', '饱腹', '力量涌现', '流行·喜爱'],
     unlikedDishTraits: ['西式', '猎奇', '果味', '流行·厌恶'],
     likedBeverageTraits: ['提神', '可加热', '古典'],
@@ -338,7 +338,7 @@ export const guests = [
   {
     name: '魂魄妖梦',
     locations: ['妖怪兽道', '人类村落', '博丽神社', '迷途竹林'],
-    balance: '300-400',
+    balance: [300, 400],
     likedDishTraits: ['力量涌现', '家常', '鲜', '清淡'],
     unlikedDishTraits: ['重油', '猎奇'],
     likedBeverageTraits: ['无酒精', '可加热', '水果'],
@@ -347,7 +347,7 @@ export const guests = [
   {
     name: '火焰猫燐',
     locations: ['地灵殿', '旧地狱'],
-    balance: '500-600',
+    balance: [500, 600],
     likedDishTraits: ['水产', '鲜', '甜', '梦幻', '海味', '猎奇', '流行·喜爱'],
     unlikedDishTraits: ['生', '灼热'],
     likedBeverageTraits: ['清酒', '水果', '低酒精'],
@@ -356,7 +356,7 @@ export const guests = [
   {
     name: '霍青娥',
     locations: ['神灵庙'],
-    balance: '400-900',
+    balance: [400, 900],
     likedDishTraits: [
       '传说',
       '小巧',
@@ -381,7 +381,6 @@ export const guests = [
   {
     name: '蕾米莉亚',
     locations: ['红魔馆（剧情角色）', '特殊'],
-    balance: '',
     likedDishTraits: ['西式', '甜', '生', '高级'],
     unlikedDishTraits: [],
     likedBeverageTraits: ['甘', '西洋酒', '古典', '水果'],
@@ -390,7 +389,7 @@ export const guests = [
   {
     name: '莉格露',
     locations: ['妖怪兽道'],
-    balance: '200-400',
+    balance: [200, 400],
     likedDishTraits: ['甜', '生', '肉', '猎奇'],
     unlikedDishTraits: ['素', '清淡', '凉爽'],
     likedBeverageTraits: ['低酒精', '可加冰'],
@@ -399,7 +398,7 @@ export const guests = [
   {
     name: '灵乌路空',
     locations: ['地灵殿', '旧地狱'],
-    balance: '500-800',
+    balance: [500, 800],
     likedDishTraits: ['力量涌现', '重油', '咸', '肉', '辣', '灼热'],
     unlikedDishTraits: ['菌类', '清淡'],
     likedBeverageTraits: ['中酒精', '可加热', '鸡尾酒'],
@@ -408,7 +407,7 @@ export const guests = [
   {
     name: '露米娅',
     locations: ['妖怪兽道'],
-    balance: '150-350',
+    balance: [150, 350],
     likedDishTraits: ['猎奇', '生', '饱腹', '招牌', '肉', '流行·喜爱'],
     unlikedDishTraits: ['下酒', '昂贵', '流行·厌恶'],
     likedBeverageTraits: ['苦', '气泡'],
@@ -459,7 +458,7 @@ export const guests = [
   {
     name: '帕秋莉',
     locations: ['红魔馆', '地灵殿'],
-    balance: '600-1000',
+    balance: [600, 1000],
     likedDishTraits: ['适合拍照', '西式', '甜', '梦幻', '高级'],
     unlikedDishTraits: ['生', '灼热', '猎奇', '咸'],
     likedBeverageTraits: ['利口酒', '鸡尾酒', '气泡'],
@@ -468,7 +467,7 @@ export const guests = [
   {
     name: '蓬莱山辉夜',
     locations: ['迷途竹林'],
-    balance: '1000-1500',
+    balance: [1000, 1500],
     likedDishTraits: ['传说', '不可思议', '和风', '文化底蕴', '流行·喜爱'],
     unlikedDishTraits: ['招牌', '大份', '猎奇', '流行·厌恶'],
     likedBeverageTraits: ['清酒', '现代', '古典'],
@@ -477,7 +476,7 @@ export const guests = [
   {
     name: '琪露诺',
     locations: ['红魔馆', '妖怪之山'],
-    balance: '100-200',
+    balance: [100, 200],
     likedDishTraits: ['凉爽', '甜', '适合拍照', '猎奇', '流行·厌恶'],
     unlikedDishTraits: ['昂贵', '文化底蕴', '下酒', '流行·喜爱'],
     likedBeverageTraits: ['水果', '甘', '可加冰'],
@@ -486,7 +485,7 @@ export const guests = [
   {
     name: '犬走椛',
     locations: ['妖怪之山'],
-    balance: '300-400',
+    balance: [300, 400],
     likedDishTraits: ['重油', '肉', '下酒', '山珍', '大份'],
     unlikedDishTraits: ['清淡', '猎奇', '素'],
     likedBeverageTraits: ['中酒精', '高酒精', '直饮'],
@@ -542,7 +541,7 @@ export const guests = [
   {
     name: '森近霖之助',
     locations: ['人类村落'],
-    balance: '250-400',
+    balance: [250, 400],
     likedDishTraits: ['鲜', '家常', '饱腹', '流行·喜爱'],
     unlikedDishTraits: ['下酒', '猎奇', '重油', '流行·厌恶'],
     likedBeverageTraits: ['烧酒', '啤酒'],
@@ -609,7 +608,7 @@ export const guests = [
   {
     name: '上白泽慧音',
     locations: ['人类村落'],
-    balance: '400-800',
+    balance: [400, 800],
     likedDishTraits: [
       '清淡',
       '素',
@@ -626,7 +625,7 @@ export const guests = [
   {
     name: '矢田寺成美',
     locations: ['魔法森林', '命莲寺'],
-    balance: '300-600',
+    balance: [300, 600],
     likedDishTraits: ['特产', '和风', '文化底蕴', '山珍', '清淡'],
     unlikedDishTraits: ['饱腹', '重油'],
     likedBeverageTraits: ['直饮', '古典', '低酒精', '中酒精', '可加冰'],
@@ -635,7 +634,7 @@ export const guests = [
   {
     name: '水桥帕露西',
     locations: ['旧地狱'],
-    balance: '300-400',
+    balance: [300, 400],
     likedDishTraits: ['咸', '鲜', '辣', '酸', '果味', '肉', '流行·厌恶'],
     unlikedDishTraits: ['甜', '流行·喜爱'],
     likedBeverageTraits: ['辛', '无酒精', '直饮', '苦', '可加热'],
@@ -644,7 +643,7 @@ export const guests = [
   {
     name: '苏我屠自古',
     locations: ['神灵庙'],
-    balance: '500-600',
+    balance: [500, 600],
     likedDishTraits: [
       '饱腹',
       '家常',
@@ -661,7 +660,7 @@ export const guests = [
   {
     name: '藤原妹红',
     locations: ['迷途竹林'],
-    balance: '300-600',
+    balance: [300, 600],
     likedDishTraits: ['果味', '燃起来了', '辣', '灼热'],
     unlikedDishTraits: ['高级', '昂贵', '不可思议'],
     likedBeverageTraits: ['烧酒', '辛', '苦'],
@@ -696,7 +695,7 @@ export const guests = [
   {
     name: '物部布都',
     locations: ['神灵庙'],
-    balance: '600-900',
+    balance: [600, 900],
     likedDishTraits: [
       '高级',
       '传说',
@@ -713,7 +712,7 @@ export const guests = [
   {
     name: '雾雨魔理沙',
     locations: ['任意地点'],
-    balance: '3000-5000',
+    balance: [3000, 5000],
     likedDishTraits: ['和风', '菌类', '传说', '灼热', '重油', '流行·喜爱'],
     unlikedDishTraits: ['猎奇', '流行·厌恶'],
     likedBeverageTraits: ['低酒精', '可加冰'],
@@ -722,7 +721,7 @@ export const guests = [
   {
     name: '西行寺幽幽子',
     locations: ['红魔馆', '博丽神社', '迷途竹林'],
-    balance: '1300-1800',
+    balance: [1300, 1800],
     likedDishTraits: [
       '传说',
       '大份',
@@ -755,7 +754,7 @@ export const guests = [
   {
     name: '星熊勇仪',
     locations: ['旧地狱', '地灵殿'],
-    balance: '600-1000',
+    balance: [600, 1000],
     likedDishTraits: [
       '招牌',
       '传说',
@@ -863,7 +862,7 @@ export const guests = [
   {
     name: '伊吹萃香',
     locations: ['博丽神社', '妖怪之山'],
-    balance: '600-800',
+    balance: [600, 800],
     likedDishTraits: ['肉', '下酒', '力量涌现', '小巧', '和风', '流行·喜爱'],
     unlikedDishTraits: ['重油', '流行·厌恶'],
     likedBeverageTraits: ['高酒精', '直饮'],
@@ -872,7 +871,7 @@ export const guests = [
   {
     name: '因幡帝',
     locations: ['迷途竹林'],
-    balance: '200-400',
+    balance: [200, 400],
     likedDishTraits: ['小巧', '甜', '传说', '凉爽', '梦幻', '流行·喜爱'],
     unlikedDishTraits: ['山珍', '重油', '猎奇', '流行·厌恶'],
     likedBeverageTraits: ['甘', '无酒精', '水果'],

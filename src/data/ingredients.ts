@@ -1,3 +1,10 @@
+export type Ingredients = DeepReadonly<{
+  name: string;
+  type: string;
+  features: string[];
+  relatedFoods: string[];
+  description: string;
+}>;
 export const ingredients = [
   {
     name: '八目鳗',
