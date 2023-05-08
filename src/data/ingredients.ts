@@ -1,4 +1,4 @@
-export type Ingredients = DeepReadonly<{
+export type Ingredient = DeepReadonly<{
   name: string;
   type: string;
   features: string[];
@@ -481,4 +481,4 @@ export const ingredients = [
     ],
     description: '栖息于淡水中的冷水鱼，较为常见',
   },
-] as const;
+] as Ingredient[];

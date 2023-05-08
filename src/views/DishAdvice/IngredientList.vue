@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import type { Ingredients } from '@/data';
+import type { Ingredient } from '@/data';
 const emit = defineEmits(['update:modelValue']);
 const { ingredient, modelValue } = defineProps<{
   modelValue: Boolean;
-  ingredient: Ingredients;
+  ingredient: Ingredient[];
 }>();
 console.log(ingredient);
 </script>

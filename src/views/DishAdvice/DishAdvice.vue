@@ -7,7 +7,7 @@ import IngredientList from './IngredientList.vue';
 import { guests, dishes, ingredients } from '@/data';
 import { ref } from 'vue';
 
-import type { Guest, Dish, Ingredients } from '@/data';
+import type { Guest, Dish, Ingredient } from '@/data';
 
 const guest = ref({} as Guest);
 const filteredDishes = ref<Dish[]>([]);
@@ -30,7 +30,7 @@ function guestSelect(value: Guest) {
 
 const ingredientListVisible = ref(false);
 const dish = ref({} as Dish);
-const filteredIngredients = ref<Ingredients[]>([]);
+const filteredIngredients = ref<Ingredient[]>([]);
 function dishSelect(value: Dish) {
   dish.value = value;
   filteredIngredients.value = ingredients
@@ -47,7 +47,7 @@ function dishSelect(value: Dish) {
       }
       if (features.length > 0) pre.push({ ...ingredient, features });
       return pre;
-    }, [] as Ingredients[])
+    }, [] as Ingredient[])
     .sort((x, y) => y.features.length - x.features.length);
   ingredientListVisible.value = true;
 }
