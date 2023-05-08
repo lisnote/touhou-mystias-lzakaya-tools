@@ -1,7 +1,5 @@
 <script setup lang="ts">
-import RecursiveMenu, { MenuRouteAdaptor } from './RecursiveMenu';
 import Navigator from './Navigator';
-import { menuRoutes } from '@/router';
 import { useRouter } from 'vue-router';
 import { ref } from 'vue';
 
@@ -16,12 +14,6 @@ router.isReady().then(() => {
   <div class="layout">
     <Navigator class="nav"></Navigator>
     <div class="main">
-      <RecursiveMenu
-        :data="MenuRouteAdaptor(menuRoutes)"
-        :default-active="activeIndex"
-        class="sidebar"
-        ellipsis
-      />
       <article class="article">
         <RouterView />
       </article>

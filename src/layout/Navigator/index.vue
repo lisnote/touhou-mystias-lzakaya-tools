@@ -1,21 +1,23 @@
 <script setup lang="ts">
 import { useMainStore } from '@/store';
-// import { Setting } from '@element-plus/icons-vue';
 const mainStore = useMainStore();
-const bilibiliLink = import.meta.env.VITE_BILIBILI
+const bilibiliLink = import.meta.env.VITE_BILIBILI;
 </script>
 <template>
   <nav class="navigator">
-    <RouterLink to="/" class="project-name">
-      {{ mainStore.projectName.toUpperCase() }}
-    </RouterLink>
+    <div>
+      <RouterLink to="/" class="project-name">
+        {{ mainStore.projectName.toUpperCase() }}
+      </RouterLink>
+      <RouterLink to="DishAdvice" class="divide">推荐菜</RouterLink>
+      <RouterLink to="DataSource" class="divide">数据源</RouterLink>
+    </div>
     <a class="navigator-action" :href="bilibiliLink">
       <img
         class="w-30px rounded-1/2"
         src="https://avatars.githubusercontent.com/lisnote"
       />
       <span>{{ mainStore.author }}</span>
-      <!-- <Setting class="cursor-pointer icon" /> -->
     </a>
   </nav>
 </template>
@@ -39,5 +41,9 @@ const bilibiliLink = import.meta.env.VITE_BILIBILI
       margin: 0 0.5rem;
     }
   }
+}
+.divide {
+  border-left-width: 1px;
+  padding:0 10px;
 }
 </style>
