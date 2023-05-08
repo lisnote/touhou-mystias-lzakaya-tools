@@ -5,7 +5,6 @@ const { ingredient, modelValue } = defineProps<{
   modelValue: Boolean;
   ingredient: Ingredient[];
 }>();
-console.log(ingredient);
 </script>
 <template>
   <ElDrawer
