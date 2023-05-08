@@ -1,78 +1,15 @@
 <script lang="ts" setup>
-import guests from '@/data/guests';
-console.log(guests[0])
-interface Tree {
-  label: string;
-  children?: Tree[];
-}
+import { guests } from '@/data';
+import common from '@/styles/common.module.scss';
+import GuestsSelect from './GuestsSelect.vue';
 
-const handleNodeClick = (data: Tree) => {
-  console.log(data);
-};
-
-const data: Tree[] = [
-  {
-    label: 'Level one 1',
-    children: [
-      {
-        label: 'Level two 1-1',
-        children: [
-          {
-            label: 'Level three 1-1-1',
-          },
-        ],
-      },
-    ],
-  },
-  {
-    label: 'Level one 2',
-    children: [
-      {
-        label: 'Level two 2-1',
-        children: [
-          {
-            label: 'Level three 2-1-1',
-          },
-        ],
-      },
-      {
-        label: 'Level two 2-2',
-        children: [
-          {
-            label: 'Level three 2-2-1',
-          },
-        ],
-      },
-    ],
-  },
-  {
-    label: 'Level one 3',
-    children: [
-      {
-        label: 'Level two 3-1',
-        children: [
-          {
-            label: 'Level three 3-1-1',
-          },
-        ],
-      },
-      {
-        label: 'Level two 3-2',
-        children: [
-          {
-            label: 'Level three 3-2-1',
-          },
-        ],
-      },
-    ],
-  },
-];
-
-const defaultProps = {
-  children: 'children',
-  label: 'label',
-};
+console.log(guests.filter((item) => item.type != 'normal'));
 </script>
 <template>
-  <el-tree :data="data" :props="defaultProps" @node-click="handleNodeClick" />
+  <div :class="common.contentArea" class="divide-x-1 flex flex-column">
+    <div class="w-200px">
+      <GuestsSelect />
+    </div>
+    <div class="flex-1">article</div>
+  </div>
 </template>
