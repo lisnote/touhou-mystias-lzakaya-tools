@@ -1,30 +1,39 @@
 <script setup lang="ts">
+import guests from '@/data/guests';
 import beverages from '@/data/beverages';
 import dishes from '@/data/dishes';
 import ingredients from '@/data/ingredients';
-import guests from '@/data/guests';
 import globalStyles from '@/styles/globalStyles.module.scss';
 
 function stringify(value: any) {
   return JSON.stringify(value, null, 2);
 }
+
+const tabData = [
+  { label: '顾客', value: stringify(guests) },
+  { label: '料理', value: stringify(dishes) },
+  { label: '酒水', value: stringify(beverages) },
+  { label: '食材', value: stringify(ingredients) },
+];
 </script>
 
 <template>
-  <div :class="globalStyles.contentArea" class="break-words">
+  <div :class="globalStyles.contentArea">
     <el-tabs>
-      <el-tab-pane label="顾客">
-        <pre>{{ stringify(guests) }}</pre>
-      </el-tab-pane>
-      <el-tab-pane label="料理">
-        <pre>{{ stringify(dishes) }}</pre>
-      </el-tab-pane>
-      <el-tab-pane label="酒水">
-        <pre>{{ stringify(beverages) }}</pre>
-      </el-tab-pane>
-      <el-tab-pane label="食材">
-        <pre>{{ stringify(ingredients) }}</pre>
+      <el-tab-pane
+        v-for="item in tabData"
+        :key="item.label"
+        :label="item.label"
+      >
+        <pre class="whitespace-pre-wrap">{{ item.value }}</pre>
       </el-tab-pane>
     </el-tabs>
   </div>
 </template>
+<style scoped lang="scss">
+// pre {
+//   overflow-wrap: break-word;
+//   word-break: break-all;
+//   white-space: break-spaces;
+// }
+</style>
