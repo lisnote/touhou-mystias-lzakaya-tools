@@ -138,7 +138,7 @@ export default [
   },
   {
     name: '地精',
-    location: ['？？？？？'],
+    location: ['？？？？？', '特殊'],
     likedDishTraits: [
       '凉爽',
       '高级',
@@ -371,7 +371,7 @@ export default [
   },
   {
     name: '蕾米莉亚',
-    location: ['剧情角色'],
+    location: ['红魔馆（剧情角色）', '特殊'],
     balance: '',
     likedDishTraits: ['西式', '甜', '生', '高级'],
     unlikedDishTraits: [],
@@ -883,4 +883,12 @@ export default [
     likedBeverageTraits: ['无酒精', '低酒精'],
     type: 'normal',
   },
-] as const;
+] as DeepReadonly<{
+  name: string;
+  location: string[];
+  balance: string;
+  likedDishTraits: string[];
+  unlikedDishTraits: string[];
+  likedBeverageTraits: string[];
+  type: 'normal' | 'rare' | 'special';
+}>[];
