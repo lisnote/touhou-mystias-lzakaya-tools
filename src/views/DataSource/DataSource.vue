@@ -1,8 +1,5 @@
 <script setup lang="ts">
-import guests from '@/data/guests';
-import beverages from '@/data/beverages';
-import dishes from '@/data/dishes';
-import ingredients from '@/data/ingredients';
+import { guests, dishes, beverages, ingredients } from '@/data';
 import globalStyles from '@/styles/globalStyles.module.scss';
 
 function stringify(value: any) {
