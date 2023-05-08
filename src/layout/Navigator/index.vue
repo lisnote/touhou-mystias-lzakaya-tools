@@ -2,20 +2,21 @@
 import { useMainStore } from '@/store';
 // import { Setting } from '@element-plus/icons-vue';
 const mainStore = useMainStore();
+const bilibiliLink = import.meta.env.VITE_BILIBILI
 </script>
 <template>
   <nav class="navigator">
     <RouterLink to="/" class="project-name">
       {{ mainStore.projectName.toUpperCase() }}
     </RouterLink>
-    <div class="navigator-action">
+    <a class="navigator-action" :href="bilibiliLink">
       <img
-        class="w-10 rounded-1/2"
+        class="w-30px rounded-1/2"
         src="https://avatars.githubusercontent.com/lisnote"
       />
       <span>{{ mainStore.author }}</span>
       <!-- <Setting class="cursor-pointer icon" /> -->
-    </div>
+    </a>
   </nav>
 </template>
 <style scoped lang="scss">
