@@ -3,6 +3,7 @@ import common from '@/styles/common.module.scss';
 import GuestSelect from './GuestSelect.vue';
 import GuestInfo from './GuestInfo.vue';
 import DishList from './DishList.vue';
+import IngredientList from './IngredientList.vue';
 import { guests, dishes, ingredients } from '@/data';
 import { ref } from 'vue';
 
@@ -10,10 +11,9 @@ import type { Guest, Dish, Ingredients } from '@/data';
 
 const guest = ref({} as Guest);
 const filteredDishes = ref<Dish[]>([]);
-const filteredIngredients = ref<Ingredients[]>([]);
+guestSelect(guests[0]);
 function guestSelect(value: Guest) {
   guest.value = value;
-  // 过滤菜肴
   filteredDishes.value = dishes
     .reduce((pre, dish) => {
       let features: string[] = [];
@@ -26,21 +26,31 @@ function guestSelect(value: Guest) {
       return pre;
     }, [] as Dish[])
     .sort((x, y) => y.features.length - x.features.length);
-  // 过滤食材
+}
+
+const ingredientListVisible = ref(false);
+const dish = ref({} as Dish);
+const filteredIngredients = ref<Ingredients[]>([]);
+function dishSelect(value: Dish) {
+  dish.value = value;
   filteredIngredients.value = ingredients
     .reduce((pre, ingredient) => {
       let features: string[] = [];
       for (let feature of ingredient.features) {
         if (guest.value.unlikedDishTraits?.includes(feature)) return pre;
-        if (guest.value.likedDishTraits.includes(feature))
+        if (
+          guest.value.likedDishTraits.includes(feature) &&
+          !dish.value.features.includes(feature) &&
+          !dish.value.missingFeatures.includes(feature)
+        )
           features.push(feature);
       }
       if (features.length > 0) pre.push({ ...ingredient, features });
       return pre;
     }, [] as Ingredients[])
     .sort((x, y) => y.features.length - x.features.length);
+  ingredientListVisible.value = true;
 }
-guestSelect(guests[0]);
 </script>
 <template>
   <div :class="common.contentArea" class="divide-x-1 flex">
@@ -49,7 +59,15 @@ guestSelect(guests[0]);
     </ElScrollbar>
     <div class="flex-1 pl-20px flex flex-col">
       <GuestInfo :guest="guest" />
-      <DishList :dishes="filteredDishes" class="flex-1"/>
+      <DishList
+        :dishes="filteredDishes"
+        class="flex-1"
+        @dishSelect="dishSelect"
+      />
+      <IngredientList
+        :ingredient="filteredIngredients"
+        v-model="ingredientListVisible"
+      />
     </div>
   </div>
 </template>

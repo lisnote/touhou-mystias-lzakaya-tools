@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { Dish } from '@/data';
 const { dishes } = defineProps<{ dishes: Dish[] }>();
-const emit = defineEmits(['deshSelect']);
+const emit = defineEmits(['dishSelect']);
 function rowClick(value: Dish) {
-  emit('deshSelect', value);
+  emit('dishSelect', value);
 }
 </script>
 <template>
