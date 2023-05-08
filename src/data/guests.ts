@@ -1,8 +1,7 @@
-import location from "./location";
-export default [
+export const guests = [
   {
     name: '爱丽丝',
-    location: ['魔法森林'],
+    locations: ['魔法森林'],
     balance: '500-800',
     likedDishTraits: ['家常', '高级', '文化底蕴', '甜', '西式'],
     unlikedDishTraits: ['肉', '饱腹', '重油', '猎奇'],
@@ -11,14 +10,14 @@ export default [
   },
   {
     name: '八尺大人',
-    location: ['命莲寺'],
+    locations: ['命莲寺'],
     likedDishTraits: ['凉爽', '鲜', '西式', '和风', '适合拍照', '流行·喜爱'],
     likedBeverageTraits: ['低酒精', '可加冰', '西洋酒', '利口酒', '鸡尾酒'],
     type: 'normal',
   },
   {
     name: '白狼天狗',
-    location: ['妖怪之山'],
+    locations: ['妖怪之山'],
     likedDishTraits: [
       '肉',
       '重油',
@@ -36,7 +35,7 @@ export default [
   },
   {
     name: '稗田阿求',
-    location: ['人类村落'],
+    locations: ['人类村落'],
     balance: '500-800',
     likedDishTraits: [
       '和风',
@@ -53,7 +52,7 @@ export default [
   },
   {
     name: '豹女',
-    location: ['地灵殿'],
+    locations: ['地灵殿'],
     likedDishTraits: [
       '肉',
       '山珍',
@@ -70,7 +69,7 @@ export default [
   },
   {
     name: '比那名居天子',
-    location: ['博丽神社', '妖怪之山'],
+    locations: ['博丽神社', '妖怪之山'],
     balance: '2000-3000',
     likedDishTraits: [
       '素',
@@ -88,7 +87,7 @@ export default [
   },
   {
     name: '博丽灵梦',
-    location: ['博丽神社', '人类村落', '魔法森林'],
+    locations: ['博丽神社', '人类村落', '魔法森林'],
     balance: '150-300',
     likedDishTraits: ['实惠', '饱腹', '甜', '不可思议', '高级', '流行·喜爱'],
     unlikedDishTraits: ['昂贵', '下酒', '流行·厌恶'],
@@ -97,7 +96,7 @@ export default [
   },
   {
     name: '橙',
-    location: ['妖怪兽道'],
+    locations: ['妖怪兽道'],
     balance: '400-600',
     likedDishTraits: ['肉', '水产', '烧烤', '甜', '重油', '流行·喜爱'],
     unlikedDishTraits: ['素', '灼热', '猎奇', '流行·厌恶'],
@@ -106,7 +105,7 @@ export default [
   },
   {
     name: '茨木华扇',
-    location: ['人类村落'],
+    locations: ['人类村落'],
     balance: '400-600',
     likedDishTraits: ['文化底蕴', '家常', '下酒', '和风'],
     unlikedDishTraits: ['实惠', '生', '辣'],
@@ -115,7 +114,7 @@ export default [
   },
   {
     name: '村纱水蜜',
-    location: ['命莲寺'],
+    locations: ['命莲寺'],
     balance: '400-600',
     likedDishTraits: ['咸', '特产', '力量涌现', '鲜', '肉', '高级', '饱腹'],
     unlikedDishTraits: ['素', '小巧', '猎奇', '酸'],
@@ -124,7 +123,7 @@ export default [
   },
   {
     name: '道士',
-    location: ['神灵庙'],
+    locations: ['神灵庙'],
     likedDishTraits: [
       '山珍',
       '家常',
@@ -139,7 +138,7 @@ export default [
   },
   {
     name: '地精',
-    location: ['？？？？？', '特殊'],
+    locations: ['？？？？？', '特殊'],
     likedDishTraits: [
       '凉爽',
       '高级',
@@ -154,7 +153,7 @@ export default [
   },
   {
     name: '地狱鸦',
-    location: ['地灵殿'],
+    locations: ['地灵殿'],
     likedDishTraits: [
       '肉',
       '家常',
@@ -171,7 +170,7 @@ export default [
   },
   {
     name: '东风谷早苗',
-    location: ['妖怪之山', '魔法森林'],
+    locations: ['妖怪之山', '魔法森林'],
     balance: '400-600',
     likedDishTraits: ['和风', '梦幻', '适合拍照', '甜', '家常', '流行·喜爱'],
     unlikedDishTraits: ['猎奇', '生', '重油', '灼热'],
@@ -190,7 +189,7 @@ export default [
   },
   {
     name: '多多良小伞',
-    location: ['命莲寺'],
+    locations: ['命莲寺'],
     balance: '150-900',
     likedDishTraits: [
       '甜',
@@ -208,7 +207,7 @@ export default [
   },
   {
     name: '封兽鵺',
-    location: ['命莲寺'],
+    locations: ['命莲寺'],
     balance: '300-500',
     likedDishTraits: [
       '鲜',
@@ -227,7 +226,7 @@ export default [
   },
   {
     name: '姑获鸟',
-    location: ['地灵殿'],
+    locations: ['地灵殿'],
     likedDishTraits: [
       '水产',
       '家常',
@@ -243,7 +242,7 @@ export default [
   },
   {
     name: '古明地觉',
-    location: ['地灵殿'],
+    locations: ['地灵殿'],
     balance: '500-600',
     likedDishTraits: ['小巧', '甜', '梦幻', '特产', '家常', '力量涌现'],
     unlikedDishTraits: ['肉', '山珍', '灼热', '猎奇', '大份'],
@@ -252,7 +251,7 @@ export default [
   },
   {
     name: '骨女',
-    location: ['旧地狱'],
+    locations: ['旧地狱'],
     likedDishTraits: [
       '素',
       '清淡',
@@ -269,7 +268,7 @@ export default [
   },
   {
     name: '鬼',
-    location: ['旧地狱'],
+    locations: ['旧地狱'],
     likedDishTraits: [
       '肉',
       '高级',
@@ -286,7 +285,7 @@ export default [
   },
   {
     name: '河城荷取',
-    location: ['妖怪之山'],
+    locations: ['妖怪之山'],
     balance: '400-500',
     likedDishTraits: ['高级', '下酒', '咸', '招牌', '水产', '猎奇'],
     unlikedDishTraits: ['素', '文化底蕴', '山珍'],
@@ -295,7 +294,7 @@ export default [
   },
   {
     name: '河童',
-    location: ['博丽神社', '红魔馆', '魔法森林', '妖怪之山'],
+    locations: ['博丽神社', '红魔馆', '魔法森林', '妖怪之山'],
     likedDishTraits: [
       '招牌',
       '大份',
@@ -311,7 +310,7 @@ export default [
   },
   {
     name: '黑谷山女',
-    location: ['旧地狱'],
+    locations: ['旧地狱'],
     balance: '250-400',
     likedDishTraits: ['猎奇', '甜', '适合拍照', '生', '鲜', '流行·喜爱'],
     unlikedDishTraits: ['重油', '灼热', '咸'],
@@ -320,7 +319,7 @@ export default [
   },
   {
     name: '红美铃',
-    location: ['红魔馆'],
+    locations: ['红魔馆'],
     balance: '200-400',
     likedDishTraits: ['中华', '肉', '饱腹', '力量涌现', '流行·喜爱'],
     unlikedDishTraits: ['西式', '猎奇', '果味', '流行·厌恶'],
@@ -329,7 +328,7 @@ export default [
   },
   {
     name: '魂魄妖梦',
-    location: ['妖怪兽道', '人类村落', '博丽神社', '迷途竹林'],
+    locations: ['妖怪兽道', '人类村落', '博丽神社', '迷途竹林'],
     balance: '300-400',
     likedDishTraits: ['力量涌现', '家常', '鲜', '清淡'],
     unlikedDishTraits: ['重油', '猎奇'],
@@ -338,7 +337,7 @@ export default [
   },
   {
     name: '火焰猫燐',
-    location: ['地灵殿', '旧地狱'],
+    locations: ['地灵殿', '旧地狱'],
     balance: '500-600',
     likedDishTraits: ['水产', '鲜', '甜', '梦幻', '海味', '猎奇', '流行·喜爱'],
     unlikedDishTraits: ['生', '灼热'],
@@ -347,7 +346,7 @@ export default [
   },
   {
     name: '霍青娥',
-    location: ['神灵庙'],
+    locations: ['神灵庙'],
     balance: '400-900',
     likedDishTraits: [
       '传说',
@@ -365,14 +364,14 @@ export default [
   },
   {
     name: '僵尸',
-    location: ['神灵庙'],
+    locations: ['神灵庙'],
     likedDishTraits: ['全部'],
     likedBeverageTraits: ['全部'],
     type: 'normal',
   },
   {
     name: '蕾米莉亚',
-    location: ['红魔馆（剧情角色）', '特殊'],
+    locations: ['红魔馆（剧情角色）', '特殊'],
     balance: '',
     likedDishTraits: ['西式', '甜', '生', '高级'],
     unlikedDishTraits: [],
@@ -381,7 +380,7 @@ export default [
   },
   {
     name: '莉格露',
-    location: ['妖怪兽道'],
+    locations: ['妖怪兽道'],
     balance: '200-400',
     likedDishTraits: ['甜', '生', '肉', '猎奇'],
     unlikedDishTraits: ['素', '清淡', '凉爽'],
@@ -390,7 +389,7 @@ export default [
   },
   {
     name: '灵乌路空',
-    location: ['地灵殿', '旧地狱'],
+    locations: ['地灵殿', '旧地狱'],
     balance: '500-800',
     likedDishTraits: ['力量涌现', '重油', '咸', '肉', '辣', '灼热'],
     unlikedDishTraits: ['菌类', '清淡'],
@@ -399,7 +398,7 @@ export default [
   },
   {
     name: '露米娅',
-    location: ['妖怪兽道'],
+    locations: ['妖怪兽道'],
     balance: '150-350',
     likedDishTraits: ['猎奇', '生', '饱腹', '招牌', '肉', '流行·喜爱'],
     unlikedDishTraits: ['下酒', '昂贵', '流行·厌恶'],
@@ -408,14 +407,14 @@ export default [
   },
   {
     name: '蟒蛇精',
-    location: ['妖怪兽道', '旧地狱', '妖怪之山'],
+    locations: ['妖怪兽道', '旧地狱', '妖怪之山'],
     likedDishTraits: ['肉', '下酒', '山珍', '力量涌现', '流行·喜爱'],
     likedBeverageTraits: ['烧酒', '清酒'],
     type: 'normal',
   },
   {
     name: '谜之人形',
-    location: ['魔法森林'],
+    locations: ['魔法森林'],
     likedDishTraits: [
       '家常',
       '咸',
@@ -432,7 +431,7 @@ export default [
   },
   {
     name: '魔法使',
-    location: ['魔法森林'],
+    locations: ['魔法森林'],
     likedDishTraits: [
       '素',
       '家常',
@@ -450,7 +449,7 @@ export default [
   },
   {
     name: '帕秋莉',
-    location: ['红魔馆', '地灵殿'],
+    locations: ['红魔馆', '地灵殿'],
     balance: '600-1000',
     likedDishTraits: ['适合拍照', '西式', '甜', '梦幻', '高级'],
     unlikedDishTraits: ['生', '灼热', '猎奇', '咸'],
@@ -459,7 +458,7 @@ export default [
   },
   {
     name: '蓬莱山辉夜',
-    location: ['迷途竹林'],
+    locations: ['迷途竹林'],
     balance: '1000-1500',
     likedDishTraits: ['传说', '不可思议', '和风', '文化底蕴', '流行·喜爱'],
     unlikedDishTraits: ['招牌', '大份', '猎奇', '流行·厌恶'],
@@ -468,7 +467,7 @@ export default [
   },
   {
     name: '琪露诺',
-    location: ['红魔馆', '妖怪之山'],
+    locations: ['红魔馆', '妖怪之山'],
     balance: '100-200',
     likedDishTraits: ['凉爽', '甜', '适合拍照', '猎奇', '流行·厌恶'],
     unlikedDishTraits: ['昂贵', '文化底蕴', '下酒', '流行·喜爱'],
@@ -477,7 +476,7 @@ export default [
   },
   {
     name: '犬走椛',
-    location: ['妖怪之山'],
+    locations: ['妖怪之山'],
     balance: '300-400',
     likedDishTraits: ['重油', '肉', '下酒', '山珍', '大份'],
     unlikedDishTraits: ['清淡', '猎奇', '素'],
@@ -486,7 +485,7 @@ export default [
   },
   {
     name: '人类男性',
-    location: ['人类村落', '命莲寺', '神灵庙'],
+    locations: ['人类村落', '命莲寺', '神灵庙'],
     likedDishTraits: [
       '肉',
       '下酒',
@@ -502,14 +501,14 @@ export default [
   },
   {
     name: '人类女性',
-    location: ['人类村落', '博丽神社'],
+    locations: ['人类村落', '博丽神社'],
     likedDishTraits: ['招牌', '水产', '高级', '咸', '鲜', '凉爽', '流行·喜爱'],
     likedBeverageTraits: ['可加冰'],
     type: 'normal',
   },
   {
     name: '人类小孩',
-    location: ['人类村落', '博丽神社', '命莲寺', '神灵庙'],
+    locations: ['人类村落', '博丽神社', '命莲寺', '神灵庙'],
     likedDishTraits: [
       '招牌',
       '肉',
@@ -526,14 +525,14 @@ export default [
   },
   {
     name: '人类长者',
-    location: ['人类村落', '博丽神社', '神灵庙'],
+    locations: ['人类村落', '博丽神社', '神灵庙'],
     likedDishTraits: ['招牌', '高级', '适合拍照', '灼热', '流行·喜爱'],
     likedBeverageTraits: ['低酒精'],
     type: 'normal',
   },
   {
     name: '森近霖之助',
-    location: ['人类村落'],
+    locations: ['人类村落'],
     balance: '250-400',
     likedDishTraits: ['鲜', '家常', '饱腹', '流行·喜爱'],
     unlikedDishTraits: ['下酒', '猎奇', '重油', '流行·厌恶'],
@@ -542,7 +541,7 @@ export default [
   },
   {
     name: '森之妖精',
-    location: ['魔法森林'],
+    locations: ['魔法森林'],
     likedDishTraits: [
       '凉爽',
       '小巧',
@@ -561,14 +560,14 @@ export default [
   },
   {
     name: '僧侣',
-    location: ['命莲寺'],
+    locations: ['命莲寺'],
     likedDishTraits: ['肉', '家常', '下酒', '力量涌现', '山珍流行·喜爱'],
     likedBeverageTraits: ['中酒精', '高酒精', '古典', '可加热', '烧酒'],
     type: 'normal',
   },
   {
     name: '山佬',
-    location: ['妖怪之山'],
+    locations: ['妖怪之山'],
     likedDishTraits: [
       '肉',
       '家常',
@@ -584,7 +583,7 @@ export default [
   },
   {
     name: '山童',
-    location: ['妖怪之山'],
+    locations: ['妖怪之山'],
     likedDishTraits: [
       '大份',
       '高级',
@@ -600,7 +599,7 @@ export default [
   },
   {
     name: '上白泽慧音',
-    location: ['人类村落'],
+    locations: ['人类村落'],
     balance: '400-800',
     likedDishTraits: [
       '清淡',
@@ -617,7 +616,7 @@ export default [
   },
   {
     name: '矢田寺成美',
-    location: ['魔法森林', '命莲寺'],
+    locations: ['魔法森林', '命莲寺'],
     balance: '300-600',
     likedDishTraits: ['特产', '和风', '文化底蕴', '山珍', '清淡'],
     unlikedDishTraits: ['饱腹', '重油'],
@@ -626,7 +625,7 @@ export default [
   },
   {
     name: '水桥帕露西',
-    location: ['旧地狱'],
+    locations: ['旧地狱'],
     balance: '300-400',
     likedDishTraits: ['咸', '鲜', '辣', '酸', '果味', '肉', '流行·厌恶'],
     unlikedDishTraits: ['甜', '流行·喜爱'],
@@ -635,7 +634,7 @@ export default [
   },
   {
     name: '苏我屠自古',
-    location: ['神灵庙'],
+    locations: ['神灵庙'],
     balance: '500-600',
     likedDishTraits: [
       '饱腹',
@@ -652,7 +651,7 @@ export default [
   },
   {
     name: '藤原妹红',
-    location: ['迷途竹林'],
+    locations: ['迷途竹林'],
     balance: '300-600',
     likedDishTraits: ['果味', '燃起来了', '辣', '灼热'],
     unlikedDishTraits: ['高级', '昂贵', '不可思议'],
@@ -661,7 +660,7 @@ export default [
   },
   {
     name: '土蜘蛛',
-    location: ['旧地狱'],
+    locations: ['旧地狱'],
     likedDishTraits: [
       '肉',
       '重油',
@@ -687,7 +686,7 @@ export default [
   },
   {
     name: '物部布都',
-    location: ['神灵庙'],
+    locations: ['神灵庙'],
     balance: '600-900',
     likedDishTraits: [
       '高级',
@@ -704,7 +703,7 @@ export default [
   },
   {
     name: '雾雨魔理沙',
-    location: ['任意地点'],
+    locations: ['任意地点'],
     balance: '3000-5000',
     likedDishTraits: ['和风', '菌类', '传说', '灼热', '重油', '流行·喜爱'],
     unlikedDishTraits: ['猎奇', '流行·厌恶'],
@@ -713,7 +712,7 @@ export default [
   },
   {
     name: '西行寺幽幽子',
-    location: ['红魔馆', '博丽神社', '迷途竹林'],
+    locations: ['红魔馆', '博丽神社', '迷途竹林'],
     balance: '1300-1800',
     likedDishTraits: [
       '传说',
@@ -731,7 +730,7 @@ export default [
   },
   {
     name: '仙人',
-    location: ['神灵庙'],
+    locations: ['神灵庙'],
     likedDishTraits: [
       '小巧',
       '果味',
@@ -746,7 +745,7 @@ export default [
   },
   {
     name: '星熊勇仪',
-    location: ['旧地狱', '地灵殿'],
+    locations: ['旧地狱', '地灵殿'],
     balance: '600-1000',
     likedDishTraits: [
       '招牌',
@@ -763,21 +762,21 @@ export default [
   },
   {
     name: '鸦天狗',
-    location: ['博丽神社', '红魔馆', '迷途竹林', '妖怪之山'],
+    locations: ['博丽神社', '红魔馆', '迷途竹林', '妖怪之山'],
     likedDishTraits: ['招牌', '适合拍照', '菌类', '高级', '流行·喜爱'],
     likedBeverageTraits: ['烧酒', '清酒'],
     type: 'normal',
   },
   {
     name: '妖怪狐',
-    location: ['妖怪兽道', '红魔馆', '迷途竹林', '妖怪之山', '旧地狱'],
+    locations: ['妖怪兽道', '红魔馆', '迷途竹林', '妖怪之山', '旧地狱'],
     likedDishTraits: ['招牌', '肉', '和风', '中华', '小巧', '流行·喜爱'],
     likedBeverageTraits: ['直饮'],
     type: 'normal',
   },
   {
     name: '妖怪狸',
-    location: [
+    locations: [
       '妖怪兽道',
       '博丽神社',
       '红魔馆',
@@ -792,7 +791,7 @@ export default [
   },
   {
     name: '妖怪猫',
-    location: [
+    locations: [
       '妖怪兽道',
       '博丽神社',
       '红魔馆',
@@ -807,14 +806,14 @@ export default [
   },
   {
     name: '妖怪鼠',
-    location: ['命莲寺'],
+    locations: ['命莲寺'],
     likedDishTraits: ['大份', '果味', '家常', '高级', '梦幻', '流行·喜爱'],
     likedBeverageTraits: ['鸡尾酒', '水果', '甘', '现代', '利口酒'],
     type: 'normal',
   },
   {
     name: '妖怪兔',
-    location: [
+    locations: [
       '妖怪兽道',
       '红魔馆',
       '迷途竹林',
@@ -838,7 +837,7 @@ export default [
   },
   {
     name: '妖精',
-    location: ['红魔馆', '迷途竹林', '魔法森林'],
+    locations: ['红魔馆', '迷途竹林', '魔法森林'],
     likedDishTraits: [
       '甜',
       '梦幻',
@@ -854,7 +853,7 @@ export default [
   },
   {
     name: '伊吹萃香',
-    location: ['博丽神社', '妖怪之山'],
+    locations: ['博丽神社', '妖怪之山'],
     balance: '600-800',
     likedDishTraits: ['肉', '下酒', '力量涌现', '小巧', '和风', '流行·喜爱'],
     unlikedDishTraits: ['重油', '流行·厌恶'],
@@ -863,7 +862,7 @@ export default [
   },
   {
     name: '因幡帝',
-    location: ['迷途竹林'],
+    locations: ['迷途竹林'],
     balance: '200-400',
     likedDishTraits: ['小巧', '甜', '传说', '凉爽', '梦幻', '流行·喜爱'],
     unlikedDishTraits: ['山珍', '重油', '猎奇', '流行·厌恶'],
@@ -872,21 +871,21 @@ export default [
   },
   {
     name: '左卫门',
-    location: ['人类村落', '博丽神社'],
+    locations: ['人类村落', '博丽神社'],
     likedDishTraits: ['生', '猎奇', '力量涌现', '高级', '流行·喜爱'],
     likedBeverageTraits: ['高酒精'],
     type: 'normal',
   },
   {
     name: '座敷童子',
-    location: ['博丽神社'],
+    locations: ['博丽神社'],
     likedDishTraits: ['招牌', '凉爽', '和风', '山珍', '生', '甜', '流行·喜爱'],
     likedBeverageTraits: ['无酒精', '低酒精'],
     type: 'normal',
   },
 ] as DeepReadonly<{
   name: string;
-  location: string[];
+  locations: string[];
   balance: string;
   likedDishTraits: string[];
   unlikedDishTraits: string[];

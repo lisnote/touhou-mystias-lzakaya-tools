@@ -1,4 +1,4 @@
-export default [
+export const dishes = [
   {
     name: '白果萝卜排骨汤',
     cookware: '煮锅',

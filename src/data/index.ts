@@ -1,15 +1,20 @@
-import beverages from './beverages';
-import dishes from './dishes';
-import ingredients from './ingredients';
-import guests from './guests';
-import location from './location';
+import { beverages } from './beverages';
+import { dishes } from './dishes';
+import { ingredients } from './ingredients';
+import { guests } from './guests';
+import { locations } from './locations';
 
 const data = {
   beverages,
   dishes,
   guests,
   ingredients,
-  location,
+  locations,
 };
 
-export { data as default, beverages, dishes, guests, ingredients,location };
+export * from './beverages';
+export * from './dishes';
+export * from './ingredients';
+export * from './guests';
+export * from './locations';
+export default data;

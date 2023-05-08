@@ -1,4 +1,4 @@
-export default [
+export const locations = [
   '博丽神社',
   '地灵殿',
   '红魔馆',

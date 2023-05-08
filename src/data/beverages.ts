@@ -1,4 +1,4 @@
-export default [
+export const beverages = [
   {
     name: '“大冰棍儿！”',
     price: '35',

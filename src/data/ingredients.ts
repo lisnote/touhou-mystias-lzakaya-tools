@@ -1,4 +1,4 @@
-export default [
+export const ingredients = [
   {
     name: '八目鳗',
     type: '海鲜',
