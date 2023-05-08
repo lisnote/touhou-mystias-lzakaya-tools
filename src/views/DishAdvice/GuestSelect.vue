@@ -5,7 +5,9 @@ import { computed, reactive } from 'vue';
 import type { Guest } from '@/data';
 
 const emit = defineEmits(['guestSelect']);
-
+const recentGuests = reactive<string[]>(
+  JSON.parse(localStorage.getItem('recentGuests') ?? '[]'),
+);
 const defaultProps = {
   children: 'guests',
   label: 'name',
@@ -53,24 +55,35 @@ let treeData = computed(() => {
   }
 });
 
-const nodeClick = (data: Guest & { guests: Guest }) => {
-  if (!data.guests) emit('guestSelect', data);
-};
+function treeSelect(data: Guest & { guests: Guest }) {
+  if (recentGuests.includes(data.name)) {
+    recentGuests.splice(recentGuests.indexOf(data.name), 1);
+  } else if (recentGuests.length > 19) {
+    recentGuests.pop();
+  }
+  recentGuests.unshift(data.name);
+  localStorage.setItem('recentGuests', JSON.stringify(recentGuests));
+  if (recentGuests) if (!data.guests) emit('guestSelect', data);
+}
+function inputSelect({ value }: { value: string }) {
+  treeSelect(guests.find((item) => item.name === value) as any);
+}
 </script>
 
 <template>
   <div class="divide-y pr-20px">
     <div>
-      <ElInput v-model="treeParams.searchName" placeholder="查找角色" />
+      <ElAutocomplete
+        v-model="treeParams.searchName"
+        :fetch-suggestions="(_q:any,cb:any)=>cb(recentGuests.map(item=>({value:item})))"
+        clearable
+        @select="inputSelect"
+      />
       <ElCheckbox v-model="treeParams.type.rare">稀有</ElCheckbox>
       <ElCheckbox v-model="treeParams.type.special">特殊</ElCheckbox>
       <ElCheckbox v-model="treeParams.type.normal">普通</ElCheckbox>
       <ElCheckbox v-model="treeParams.asArray">平铺</ElCheckbox>
     </div>
-    <ElTree
-      :data="treeData"
-      :props="defaultProps"
-      @node-click="nodeClick"
-    />
+    <ElTree :data="treeData" :props="defaultProps" @node-click="treeSelect" />
   </div>
 </template>
