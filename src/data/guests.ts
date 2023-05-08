@@ -1,3 +1,12 @@
+export type Guest = DeepReadonly<{
+  name: string;
+  locations: string[];
+  balance?: string;
+  likedDishTraits: string[];
+  unlikedDishTraits?: string[];
+  likedBeverageTraits: string[];
+  type: 'normal' | 'rare' | 'special';
+}>;
 export const guests = [
   {
     name: '爱丽丝',
@@ -883,12 +892,4 @@ export const guests = [
     likedBeverageTraits: ['无酒精', '低酒精'],
     type: 'normal',
   },
-] as DeepReadonly<{
-  name: string;
-  locations: string[];
-  balance: string;
-  likedDishTraits: string[];
-  unlikedDishTraits: string[];
-  likedBeverageTraits: string[];
-  type: 'normal' | 'rare' | 'special';
-}>[];
+] as Guest[];

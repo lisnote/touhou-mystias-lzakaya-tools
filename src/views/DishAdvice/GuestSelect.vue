@@ -2,6 +2,10 @@
 import { guests, locations } from '@/data';
 import { computed, reactive } from 'vue';
 
+import type { Guest } from '@/data';
+
+const emit = defineEmits(['guestSelect']);
+
 const defaultProps = {
   children: 'guests',
   label: 'name',
@@ -30,11 +34,10 @@ let treeData = computed(() => {
   if (treeParams.asArray) {
     return filteredGuests;
   } else {
-    let locationsMap = {} as { [key: string]: typeof guests };
+    let locationsMap = {} as { [key: string]: Guest[] };
     filteredGuests.forEach((item) => {
       item.locations.forEach((locations) => {
-        if (!locationsMap[locations])
-          locationsMap[locations] = [] as typeof guests;
+        if (!locationsMap[locations]) locationsMap[locations] = [] as Guest[];
         locationsMap[locations].push(item);
       });
       return locationsMap;
@@ -46,12 +49,12 @@ let treeData = computed(() => {
           guests: locationsMap[location],
         };
       })
-      .filter((location) => location.guests?.length??0 !== 0);
+      .filter((location) => location.guests?.length ?? 0 !== 0);
   }
 });
 
-const handleNodeClick = (data: (typeof guests)[number][]) => {
-  console.log(data);
+const handleNodeClick = (data: Guest & { guests: Guest }) => {
+  if (!data.guests) emit('guestSelect', data);
 };
 </script>
 
