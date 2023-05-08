@@ -17,7 +17,7 @@ const treeParams = reactive({
     rare: true,
     special: true,
   },
-  asArray: false,
+  asArray: true,
   searchName: '',
 });
 
