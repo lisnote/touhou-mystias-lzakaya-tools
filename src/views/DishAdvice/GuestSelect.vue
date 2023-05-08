@@ -53,7 +53,7 @@ let treeData = computed(() => {
   }
 });
 
-const handleNodeClick = (data: Guest & { guests: Guest }) => {
+const nodeClick = (data: Guest & { guests: Guest }) => {
   if (!data.guests) emit('guestSelect', data);
 };
 </script>
@@ -70,7 +70,7 @@ const handleNodeClick = (data: Guest & { guests: Guest }) => {
     <ElTree
       :data="treeData"
       :props="defaultProps"
-      @node-click="handleNodeClick"
+      @node-click="nodeClick"
     />
   </div>
 </template>

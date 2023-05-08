@@ -1,9 +1,17 @@
 <script setup lang="ts">
 import { Dish } from '@/data';
 const { dishes } = defineProps<{ dishes: Dish[] }>();
+const emit = defineEmits(['deshSelect']);
+function rowClick(value: Dish) {
+  emit('deshSelect', value);
+}
 </script>
 <template>
-  <el-table :data="dishes" header-cell-class-name="el-header-cell">
+  <el-table
+    :data="dishes"
+    header-cell-class-name="el-header-cell"
+    @row-click="rowClick"
+  >
     <el-table-column prop="name" label="菜肴" />
     <el-table-column prop="cookware" label="厨具" width="100" />
     <el-table-column prop="ingredients" label="食材" />

@@ -47,9 +47,9 @@ guestSelect(guests[0]);
     <ElScrollbar class="w-200px">
       <GuestSelect @guestSelect="guestSelect($event)" />
     </ElScrollbar>
-    <ElScrollbar class="flex-1 pl-20px">
+    <div class="flex-1 pl-20px flex flex-col">
       <GuestInfo :guest="guest" />
-      <DishList :dishes="filteredDishes" />
-    </ElScrollbar>
+      <DishList :dishes="filteredDishes" class="flex-1"/>
+    </div>
   </div>
 </template>
