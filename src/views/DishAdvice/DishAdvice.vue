@@ -6,10 +6,10 @@ import GuestsSelect from './GuestsSelect.vue';
 console.log(guests.filter((item) => item.type != 'normal'));
 </script>
 <template>
-  <div :class="common.contentArea" class="divide-x-1 flex flex-column">
-    <div class="w-200px">
+  <div :class="common.contentArea" class="divide-x-1 flex">
+    <ElScrollbar class="w-200px">
       <GuestsSelect />
-    </div>
+    </ElScrollbar>
     <div class="flex-1">article</div>
   </div>
 </template>
