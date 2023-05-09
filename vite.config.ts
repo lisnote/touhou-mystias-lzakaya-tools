@@ -7,6 +7,7 @@ import WindiCSS from 'vite-plugin-windicss';
 export default ({ mode }: ConfigEnv): UserConfigExport => {
   const env = loadEnv(mode, __dirname, '');
   return {
+    base: './',
     plugins: [vue(), WindiCSS()],
     resolve: {
       alias: {
