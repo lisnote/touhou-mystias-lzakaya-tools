@@ -56,14 +56,16 @@ let treeData = computed(() => {
 });
 
 function treeSelect(data: Guest & { guests: Guest }) {
-  if (recentGuests.includes(data.name)) {
-    recentGuests.splice(recentGuests.indexOf(data.name), 1);
-  } else if (recentGuests.length > 19) {
-    recentGuests.pop();
+  if (!data.guests) {
+    if (recentGuests.includes(data.name)) {
+      recentGuests.splice(recentGuests.indexOf(data.name), 1);
+    } else if (recentGuests.length > 19) {
+      recentGuests.pop();
+    }
+    recentGuests.unshift(data.name);
+    localStorage.setItem('recentGuests', JSON.stringify(recentGuests));
+    emit('guestSelect', data);
   }
-  recentGuests.unshift(data.name);
-  localStorage.setItem('recentGuests', JSON.stringify(recentGuests));
-  if (recentGuests) if (!data.guests) emit('guestSelect', data);
 }
 function inputSelect({ value }: { value: string }) {
   treeSelect(guests.find((item) => item.name === value) as any);
