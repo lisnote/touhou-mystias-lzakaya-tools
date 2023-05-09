@@ -9,7 +9,7 @@ const { guest } = defineProps<{ guest: Guest }>();
         {{ item }}
       </ElTag>
     </el-descriptions-item>
-    <el-descriptions-item label="厌恶">
+    <el-descriptions-item label="厌恶" v-if="guest.unlikedDishTraits">
       <ElTag
         v-for="item in guest.unlikedDishTraits"
         :key="item"
