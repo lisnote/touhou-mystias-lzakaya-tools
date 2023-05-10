@@ -1,4 +1,6 @@
-export const locations = [
+import { Location } from '.';
+
+export const locations: Location[] = [
   '博丽神社',
   '地灵殿',
   '红魔馆',
@@ -11,4 +13,4 @@ export const locations = [
   '特殊',
   '妖怪兽道',
   '妖怪之山',
-] as const;
+];

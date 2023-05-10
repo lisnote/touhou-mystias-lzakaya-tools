@@ -1,15 +1,28 @@
-export type Dish = DeepReadonly<{
-  name: string;
-  cookware: string;
-  price: number;
-  ingredients: string[];
-  features: string[];
-  missingFeatures: string[];
-  cookingTime: number;
-  unlock: string;
-  description: string;
-}>;
-export const dishes = [
+import type { Dish } from '.';
+
+export const dishes: DeepReadonly<Dish[]> = [
+  {
+    name: '蘑女的舞踏烩[补充]',
+    cookware: '煮锅',
+    price: 0,
+    ingredients: ['蘑菇', '虾', '章鱼', '辣椒'],
+    features: [
+      '昂贵',
+      '水产',
+      '重油',
+      '咸',
+      '鲜',
+      '适合拍照',
+      '灼热',
+      '菌类',
+      '辣',
+    ],
+    missingFeatures: [],
+    cookingTime: 8.4,
+    unlock: '',
+    description:
+      '蘑菇为主角，佐以各种鲜嫩食材的强力料理，金灿灿的光芒散发着强烈的存在感，香浓的口感可以瞬间蒸发人的灵魂，一发沉沦。',
+  },
   {
     name: '白果萝卜排骨汤',
     cookware: '煮锅',
@@ -912,4 +925,4 @@ export const dishes = [
     description:
       '常见的家常菜，但也讲究烧制的火候，才能将豆腐的鲜嫩口感得到最大展现。',
   },
-] as Dish[];
+];

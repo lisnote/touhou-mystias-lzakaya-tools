@@ -1,13 +1,6 @@
-export type Guest = DeepReadonly<{
-  name: string;
-  locations: string[];
-  balance: number[];
-  likedDishTraits: string[];
-  unlikedDishTraits?: string[];
-  likedBeverageTraits: string[];
-  type: 'normal' | 'rare' | 'special';
-}>;
-export const guests = [
+import type { Guest } from '.';
+
+export const guests: DeepReadonly<Guest[]> = [
   {
     name: '爱丽丝',
     locations: ['魔法森林'],
@@ -569,7 +562,7 @@ export const guests = [
   {
     name: '僧侣',
     locations: ['命莲寺'],
-    likedDishTraits: ['肉', '家常', '下酒', '力量涌现', '山珍流行·喜爱'],
+    likedDishTraits: ['肉', '家常', '下酒', '力量涌现', '山珍','流行·喜爱'],
     likedBeverageTraits: ['中酒精', '高酒精', '古典', '可加热', '烧酒'],
     type: 'normal',
   },
@@ -904,4 +897,4 @@ export const guests = [
     likedBeverageTraits: ['无酒精', '低酒精'],
     type: 'normal',
   },
-] as Guest[];
+];

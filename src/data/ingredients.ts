@@ -1,11 +1,6 @@
-export type Ingredient = DeepReadonly<{
-  name: string;
-  type: string;
-  features: string[];
-  relatedFoods: string[];
-  description: string;
-}>;
-export const ingredients = [
+import type { Ingredient } from '.';
+
+export const ingredients: DeepReadonly<Ingredient[]> = [
   {
     name: '八目鳗',
     type: '海鲜',
@@ -310,7 +305,7 @@ export const ingredients = [
   {
     name: '糯米',
     type: '其他',
-    features: [''],
+    features: [],
     relatedFoods: ['麻薯', '汤圆', '白桃生八桥', '月光团子'],
     description: '很有粘性的米，制作出来的料理或绵软适口，或鲜嫩弹牙',
   },
@@ -481,4 +476,4 @@ export const ingredients = [
     ],
     description: '栖息于淡水中的冷水鱼，较为常见',
   },
-] as Ingredient[];
+];

@@ -1,7 +1,9 @@
-export const beverages = [
+import type { Beverage } from '.';
+
+export const beverages: DeepReadonly<Beverage[]> = [
   {
     name: '“大冰棍儿！”',
-    price: '35',
+    price: 35,
     features: ['无酒精', '提神', '现代', '甘'],
     obtaining: '【联动】三妖精的蹦蹦跳跳讨伐大作战 【妖怪兽道】 购买',
     description:
@@ -9,7 +11,7 @@ export const beverages = [
   },
   {
     name: '阿芙加朵',
-    price: '35',
+    price: 35,
     features: ['无酒精', '可加冰', '提神', '甘', '苦'],
     obtaining: '【红魔馆】 购买',
     description:
@@ -17,7 +19,7 @@ export const beverages = [
   },
   {
     name: '冰山毛玉冻柠',
-    price: '45',
+    price: 45,
     features: ['无酒精', '可加冰', '气泡', '提神', '水果', '直饮', '甘'],
     obtaining: '【其它】',
     description:
@@ -25,7 +27,7 @@ export const beverages = [
   },
   {
     name: '波子汽水',
-    price: '30',
+    price: 30,
     features: ['无酒精', '气泡', '现代'],
     obtaining: '【人类村落】 购买',
     description:
@@ -33,7 +35,7 @@ export const beverages = [
   },
   {
     name: '超 ZUN 啤酒',
-    price: '18',
+    price: 18,
     features: ['低酒精', '可加冰', '啤酒', '苦'],
     obtaining: '【人类村落】 购买',
     description:
@@ -41,7 +43,7 @@ export const beverages = [
   },
   {
     name: '大吟酿',
-    price: '210',
+    price: 210,
     features: ['中酒精', '清酒', '古典', '可加冰', '水果', '直饮', '甘'],
     obtaining: '【妖怪之山(DLC1)】 购买',
     description:
@@ -49,7 +51,7 @@ export const beverages = [
   },
   {
     name: '冬酿',
-    price: '60',
+    price: 60,
     features: ['低酒精', '可加冰', '可加热', '古典', '甘'],
     obtaining: '【迷途竹林】 购买',
     description:
@@ -57,7 +59,7 @@ export const beverages = [
   },
   {
     name: '风祝',
-    price: '130',
+    price: 130,
     features: ['中酒精', '可加冰', '鸡尾酒', '现代', '甘'],
     obtaining: '【博丽神社】 祈愿',
     description:
@@ -65,7 +67,7 @@ export const beverages = [
   },
   {
     name: '古法奶油冰沙 (DLC1)',
-    price: '42',
+    price: 42,
     features: ['无酒精', '甘', '可加冰', '古典'],
     obtaining: '【妖怪之山】 购买',
     description:
@@ -73,7 +75,7 @@ export const beverages = [
   },
   {
     name: '古明地冰激凌 (DLC2)',
-    price: '35',
+    price: 35,
     features: ['无酒精', '甘', '水果', '现代'],
     obtaining: '【地灵殿】 购买',
     description:
@@ -81,7 +83,7 @@ export const beverages = [
   },
   {
     name: '鬼杀 (DLC2)',
-    price: '320',
+    price: 320,
     features: ['高酒精', '可加冰', '烧酒', '辛', '古典'],
     obtaining: '【旧地狱】 购买',
     description:
@@ -89,7 +91,7 @@ export const beverages = [
   },
   {
     name: '果味 High Ball',
-    price: '12',
+    price: 12,
     features: ['低酒精', '可加冰', '西洋酒', '鸡尾酒', '水果', '甘', '苦'],
     obtaining: '【妖怪兽道】 购买',
     description:
@@ -97,7 +99,7 @@ export const beverages = [
   },
   {
     name: '果味 SOUR',
-    price: '12',
+    price: 12,
     features: ['低酒精', '可加冰', '烧酒', '鸡尾酒', '水果', '甘', '苦'],
     obtaining: '【妖怪兽道】 购买',
     description:
@@ -105,7 +107,7 @@ export const beverages = [
   },
   {
     name: '红魔馆红茶',
-    price: '25',
+    price: 25,
     features: ['无酒精', '可加热', '提神', '水果'],
     obtaining: '【红魔馆】 购买',
     description:
@@ -113,7 +115,7 @@ export const beverages = [
   },
   {
     name: '红雾',
-    price: '75',
+    price: 75,
     features: ['中酒精', '可加热', '西洋酒'],
     obtaining: '【红魔馆】 购买',
     description:
@@ -121,7 +123,7 @@ export const beverages = [
   },
   {
     name: '红柚果汁',
-    price: '24',
+    price: 24,
     features: ['无酒精', '水果'],
     obtaining: '【人类村落】 购买',
     description:
@@ -129,7 +131,7 @@ export const beverages = [
   },
   {
     name: '火鼠裘',
-    price: '420',
+    price: 420,
     features: ['高酒精', '可加热', '烧酒', '辛'],
     obtaining: '【其它】',
     description:
@@ -137,7 +139,7 @@ export const beverages = [
   },
   {
     name: '教父',
-    price: '180',
+    price: 180,
     features: ['高酒精', '可加冰', '西洋酒', '鸡尾酒', '古典', '苦'],
     obtaining: '【红魔馆】 购买',
     description:
@@ -145,7 +147,7 @@ export const beverages = [
   },
   {
     name: '咖啡 (DLC1)',
-    price: '62',
+    price: 62,
     features: ['无酒精', '苦', '现代', '可加热', '可加冰', '提神'],
     obtaining: '【魔法森林】 购买',
     description:
@@ -153,14 +155,14 @@ export const beverages = [
   },
   {
     name: '绿茶',
-    price: '1',
+    price: 1,
     features: ['无酒精'],
     obtaining: '【初始】',
     description: '最普通的饮料，给一滴酒都不能沾的弱小妖怪准备的。',
   },
   {
     name: '梅酒',
-    price: '32',
+    price: 32,
     features: ['中酒精', '可加冰', '可加热', '利口酒', '水果'],
     obtaining: '【人类村落】 购买',
     description:
@@ -168,7 +170,7 @@ export const beverages = [
   },
   {
     name: '尼格罗尼',
-    price: '100',
+    price: 100,
     features: ['中酒精', '可加冰', '西洋酒', '鸡尾酒', '水果', '苦'],
     obtaining: '【红魔馆】 购买',
     description:
@@ -176,14 +178,14 @@ export const beverages = [
   },
   {
     name: '牛奶',
-    price: '16',
+    price: 16,
     features: ['无酒精', '直饮'],
     obtaining: '【人类村落】 购买',
     description: '温润纯白的饮品，无论小孩还是大人都适合引用，好处多到说不完。',
   },
   {
     name: '普通健身茶 (DLC1)',
-    price: '210',
+    price: 210,
     features: ['中酒精', '苦', '气泡', '利口酒'],
     obtaining: '【魔法森林】 购买',
     description:
@@ -191,7 +193,7 @@ export const beverages = [
   },
   {
     name: '淇',
-    price: '18',
+    price: 18,
     features: ['低酒精', '可加冰', '清酒', '鸡尾酒', '气泡', '甘', '辛', '苦'],
     obtaining: '【妖怪兽道/人类村落】 购买',
     description:
@@ -199,7 +201,7 @@ export const beverages = [
   },
   {
     name: '麒麟 (DLC3)',
-    price: '180',
+    price: 180,
     features: ['啤酒', '中酒精', '直饮'],
     obtaining: '【道场】 购买',
     description:
@@ -207,7 +209,7 @@ export const beverages = [
   },
   {
     name: '气保健 (DLC2)',
-    price: '45',
+    price: 45,
     features: ['无酒精', '甘', '直饮', '提神'],
     obtaining: '【地灵殿】 购买',
     description:
@@ -215,7 +217,7 @@ export const beverages = [
   },
   {
     name: '雀酒',
-    price: '50',
+    price: 50,
     features: ['中酒精', '可加冰', '可加热', '清酒', '辛'],
     obtaining: '【妖怪兽道】 采集',
     description:
@@ -223,7 +225,7 @@ export const beverages = [
   },
   {
     name: '日月星',
-    price: '34',
+    price: 34,
     features: ['中酒精', '可加冰', '可加热', '清酒', '直饮'],
     obtaining: '【人类村落】 购买',
     description:
@@ -231,14 +233,14 @@ export const beverages = [
   },
   {
     name: '神之麦',
-    price: '45',
+    price: 45,
     features: ['中酒精', '可加冰', '可加热', '烧酒', '直饮'],
     obtaining: '【博丽神社】 购买',
     description: '使用妖怪之山上被秋天的神明们所庇佑的大麦所酿造的大麦烧酒。',
   },
   {
     name: '十四夜',
-    price: '440',
+    price: 440,
     features: ['中酒精', '可加冰', '可加热', '清酒', '古典', '甘'],
     obtaining: '【迷途竹林】 购买',
     description:
@@ -246,7 +248,7 @@ export const beverages = [
   },
   {
     name: '水獭祭',
-    price: '130',
+    price: 130,
     features: ['中酒精', '可加冰', '可加热', '清酒', '直饮'],
     obtaining: '【妖怪兽道】 采集',
     description:
@@ -254,7 +256,7 @@ export const beverages = [
   },
   {
     name: '天狗踊',
-    price: '70',
+    price: 70,
     features: ['高酒精', '可加冰', '可加热', '清酒', '直饮'],
     obtaining: '【博丽神社】 购买',
     description:
@@ -262,7 +264,7 @@ export const beverages = [
   },
   {
     name: '晓',
-    price: '400',
+    price: 400,
     features: ['高酒精', '可加冰', '西洋酒', '直饮'],
     obtaining: '【博丽神社】 购买',
     description:
@@ -270,7 +272,7 @@ export const beverages = [
   },
   {
     name: '猩红恶魔',
-    price: '45',
+    price: 45,
     features: ['低酒精', '可加冰', '鸡尾酒'],
     obtaining: '【博丽神社】 购买',
     description:
@@ -278,7 +280,7 @@ export const beverages = [
   },
   {
     name: '杨枝甘露 (DLC3)',
-    price: '50',
+    price: 50,
     features: ['无酒精', '可加冰', '水果'],
     obtaining: '【命莲寺】 购买',
     description:
@@ -286,7 +288,7 @@ export const beverages = [
   },
   {
     name: '妖精雨露 (DLC1)',
-    price: '80',
+    price: 80,
     features: ['无酒精', '甘', '可加冰'],
     obtaining: '【魔法森林】 购买',
     description:
@@ -294,7 +296,7 @@ export const beverages = [
   },
   {
     name: '玉露茶',
-    price: '50',
+    price: 50,
     features: ['无酒精', '可加热', '古典'],
     obtaining: '符卡、索取、交换等',
     description:
@@ -302,10 +304,10 @@ export const beverages = [
   },
   {
     name: '月面火箭',
-    price: '45',
+    price: 45,
     features: ['无酒精', '可加冰', '现代', '气泡'],
     obtaining: '【迷途竹林】 采集',
     description:
       '使用月之都先进技术制作的高级气泡水，迸发的口感有如火箭一般，只需要加一片柠檬就是完美的饮品。',
   },
-] as const;
+];
