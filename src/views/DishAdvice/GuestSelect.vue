@@ -70,6 +70,9 @@ function treeSelect(data: Guest & { guests: Guest }) {
 function inputSelect({ value }: { value: string }) {
   treeSelect(guests.find((item) => item.name === value) as any);
 }
+function fetchSuggestions(query: string, cb: Function) {
+  cb(query ? [] : recentGuests.map((guest) => ({ value: guest })));
+}
 </script>
 
 <template>
@@ -77,7 +80,7 @@ function inputSelect({ value }: { value: string }) {
     <div>
       <ElAutocomplete
         v-model="treeParams.searchName"
-        :fetch-suggestions="(_q:any,cb:any)=>cb(recentGuests.map(item=>({value:item})))"
+        :fetch-suggestions="fetchSuggestions"
         clearable
         @select="inputSelect"
       />
