@@ -104,10 +104,14 @@ onBeforeUnmount(() => {
         @select="inputSelect"
         placeholder="/搜索 ↑↓切换 ↲确认"
       />
-      <ElCheckbox v-model="treeParams.type.rare">稀有</ElCheckbox>
-      <ElCheckbox v-model="treeParams.type.special">特殊</ElCheckbox>
-      <ElCheckbox v-model="treeParams.type.normal">普通</ElCheckbox>
-      <ElCheckbox v-model="treeParams.asArray">平铺</ElCheckbox>
+      <ElCheckbox v-model="treeParams.type.rare" tabindex="-1">稀有</ElCheckbox>
+      <ElCheckbox v-model="treeParams.type.special" tabindex="-1">
+        特殊
+      </ElCheckbox>
+      <ElCheckbox v-model="treeParams.type.normal" tabindex="-1">
+        普通
+      </ElCheckbox>
+      <ElCheckbox v-model="treeParams.asArray" tabindex="-1">平铺</ElCheckbox>
     </div>
     <ElTree :data="treeData" :props="defaultProps" @node-click="treeSelect" />
   </div>
