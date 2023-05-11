@@ -12,7 +12,11 @@ const { tableProps, tableData } = defineProps<{
 }>();
 </script>
 <template>
-  <ElTable :data="tableData" :header-cell-class-name="$style.header">
+  <ElTable
+    :data="tableData"
+    :header-cell-class-name="$style.header"
+    v-bind="$attrs"
+  >
     <ElTableColumn
       v-for="col in tableProps"
       :prop="col.prop"
