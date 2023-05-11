@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { guests, locations } from '@/data';
-import { computed, reactive } from 'vue';
+import { ref, computed, reactive, onBeforeUnmount } from 'vue';
 
 import type { Guest } from '@/data';
 
@@ -71,18 +71,38 @@ function inputSelect({ value }: { value: string }) {
   treeSelect(guests.find((item) => item.name === value) as any);
 }
 function fetchSuggestions(query: string, cb: Function) {
-  cb(query ? [] : recentGuests.map((guest) => ({ value: guest })));
+  cb(
+    query
+      ? guests
+          .filter((guest) => guest.name.includes(query))
+          .map(({ name }) => ({ value: name }))
+      : recentGuests.map((guest) => ({ value: guest })),
+  );
 }
+
+const inputRef = ref<HTMLInputElement>();
+function slashListener(event: KeyboardEvent) {
+  if (inputRef.value?.onfocus || event.code !== 'Slash') return;
+  inputRef.value?.focus();
+  event.stopPropagation();
+  event.preventDefault();
+}
+window.addEventListener('keypress', slashListener);
+onBeforeUnmount(() => {
+  window.removeEventListener('keypress', slashListener);
+});
 </script>
 
 <template>
   <div class="divide-y pr-20px">
     <div>
       <ElAutocomplete
+        ref="inputRef"
         v-model="treeParams.searchName"
         :fetch-suggestions="fetchSuggestions"
         clearable
         @select="inputSelect"
+        placeholder="/搜索 ↑↓切换 ↲确认"
       />
       <ElCheckbox v-model="treeParams.type.rare">稀有</ElCheckbox>
       <ElCheckbox v-model="treeParams.type.special">特殊</ElCheckbox>

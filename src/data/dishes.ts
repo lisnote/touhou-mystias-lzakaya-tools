@@ -1,15 +1,100 @@
-export type Dish = DeepReadonly<{
-  name: string;
-  cookware: string;
-  price: number;
-  ingredients: string[];
-  features: string[];
-  missingFeatures: string[];
-  cookingTime: number;
-  unlock: string;
-  description: string;
-}>;
-export const dishes = [
+import type { Dish } from '.';
+
+export const dishes: DeepReadonly<Dish[]> = [
+  {
+    name: '芝士蛋[补充]',
+    cookware: '油锅',
+    price: 0,
+    ingredients: ['鸡蛋', '芝士'],
+    features: ['重油', '咸', '鲜', '生'],
+    missingFeatures: ['肉'],
+    cookingTime: 3.6,
+    unlock: '',
+    description:
+      '据说是刚刚被觉收养时、觉常做给她的料理，在蛋饼里混入浓香的芝士，让人无法柜绝的小吃。',
+  },
+  {
+    name: '樱花布丁[补充]',
+    cookware: '蒸锅',
+    price: 0,
+    ingredients: ['蜂蜜', '桃子'],
+    features: ['甜', '适合拍照', '凉爽', '小巧', '特产', '果味'],
+    missingFeatures: ['重油', '咸'],
+    cookingTime: 3.6,
+    unlock: '',
+    description:
+      '粉色的可爱甜品，Q软又富有弹性，香蜜的甜美气息使它成为世界上所有的女孩子都无法拒绝的无敌甜品。',
+  },
+  {
+    name: '狮子头[补充]',
+    cookware: '煮锅',
+    price: 0,
+    ingredients: ['牛肉'],
+    features: ['肉', '下酒', '鲜', '招牌', '特产'],
+    missingFeatures: ['水产', '饱腹'],
+    cookingTime: 4.2,
+    unlock: '',
+    description:
+      '爱酒之人无不喜欢的基础下酒菜!气派又野性的狮子头配上烈性的酒，是鬼族起床的早餐!',
+  },
+  {
+    name: '猫饭[补充]',
+    cookware: '料理台',
+    price: 0,
+    ingredients: ['鳟鱼', '露水', '面粉'],
+    features: ['水产', '小巧', '鲜'],
+    missingFeatures: ['重油'],
+    cookingTime: 3,
+    unlock: '',
+    description:
+      '据说是刚刚被觉收养时、觉常做给她的简易盖浇饭，面粉勾芡后淋在鱼肉上，那种温柔的味道一直留在憐的记忆里。',
+  },
+  {
+    name: '蘑女的舞踏烩[补充]',
+    cookware: '煮锅',
+    price: 0,
+    ingredients: ['蘑菇', '虾', '章鱼', '辣椒'],
+    features: [
+      '昂贵',
+      '水产',
+      '重油',
+      '咸',
+      '鲜',
+      '适合拍照',
+      '灼热',
+      '菌类',
+      '辣',
+    ],
+    missingFeatures: [],
+    cookingTime: 8.4,
+    unlock: '',
+    description:
+      '蘑菇为主角，佐以各种鲜嫩食材的强力料理，金灿灿的光芒散发着强烈的存在感，香浓的口感可以瞬间蒸发人的灵魂，一发沉沦。',
+  },
+  {
+    name: '丧气芝士条[补充]',
+    cookware: '蒸锅',
+    price: 0,
+    ingredients: ['芝士', '白果', '白果'],
+    features: ['下酒', '咸', '鲜', '特产'],
+    missingFeatures: [],
+    cookingTime: 3.6,
+    unlock: '',
+    description:
+      '在一些阴郁的妖怪中流行的零食，在浓郁的芝士中混有白果独有的苦味，能让味觉产生强烈的回甘后味，但我完全无法理解。',
+  },
+  {
+    name: '脆旋风[补充]',
+    cookware: '料理台',
+    price: 0,
+    ingredients: ['面粉', '蜂蜜', '蝉蜕'],
+    features: ['饱腹', '生', '猎奇', '特产'],
+    missingFeatures: ['重油'],
+    cookingTime: 3,
+    unlock: '',
+    description:
+      '将虫类的甲壳磨成大碎块，拌入面中，吃起来香脆又下火，有一种别样的异世界猎奇感的奇怪料理。',
+  },
   {
     name: '白果萝卜排骨汤',
     cookware: '煮锅',
@@ -912,4 +997,4 @@ export const dishes = [
     description:
       '常见的家常菜，但也讲究烧制的火候，才能将豆腐的鲜嫩口感得到最大展现。',
   },
-] as Dish[];
+];
