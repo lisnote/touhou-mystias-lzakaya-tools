@@ -1,25 +1,23 @@
 <script setup lang="ts">
+import LisTable, { parseShortTableProps } from '@/components/LisTable';
 import { Dish } from '@/data';
 const { dishes } = defineProps<{ dishes: Dish[] }>();
 const emit = defineEmits(['dishSelect']);
 function rowClick(value: Dish) {
   emit('dishSelect', value);
 }
+const tableProps = parseShortTableProps({
+  name: ['菜肴'],
+  cookware: ['厨具', { width: 100 }],
+  ingredients: ['食材'],
+  features: ['匹配正特性'],
+  missingFeatures: ['反特性'],
+  price: ['售价', { width: 80 }],
+  unlock: ['解锁方式'],
+});
 </script>
 <template>
-  <el-table
-    :data="dishes"
-    header-cell-class-name="el-header-cell"
-    @row-click="rowClick"
-  >
-    <el-table-column prop="name" label="菜肴" />
-    <el-table-column prop="cookware" label="厨具" width="100" />
-    <el-table-column prop="ingredients" label="食材" />
-    <el-table-column prop="features" label="匹配正特性" />
-    <el-table-column prop="missingFeatures" label="反特性" />
-    <el-table-column prop="price" label="售价" width="80" />
-    <el-table-column prop="unlock" label="解锁方式" />
-  </el-table>
+  <LisTable :tableProps="tableProps" :tableData="dishes" @rowClick="rowClick" />
 </template>
 
 <style scoped lang="scss">
