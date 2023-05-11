@@ -12,7 +12,7 @@ const { tableProps, tableData } = defineProps<{
 }>();
 </script>
 <template>
-  <ElTable :data="tableData">
+  <ElTable :data="tableData" :header-cell-class-name="$style.header">
     <ElTableColumn
       v-for="col in tableProps"
       :prop="col.prop"
@@ -22,3 +22,10 @@ const { tableProps, tableData } = defineProps<{
     />
   </ElTable>
 </template>
+<style module>
+.header {
+  background-color: var(--el-table-row-hover-bg-color) !important;
+  color: var(--el-color-primary);
+  font-size: 14px;
+}
+</style>
