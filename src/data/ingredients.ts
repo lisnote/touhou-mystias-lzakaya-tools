@@ -1,6 +1,6 @@
 import type { Ingredient } from '.';
 
-export const ingredients: DeepReadonly<Ingredient[]> = [
+export const ingredients: Ingredient[] = [
   {
     name: '八目鳗',
     type: '海鲜',

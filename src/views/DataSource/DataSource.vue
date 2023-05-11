@@ -67,7 +67,7 @@ const tablePropsMap: { [key in DataType]: any } = {
       :key="dataType"
       v-show="activedTab === dataType"
       :tableProps="tablePropsMap[dataType]"
-      :tableData="data[dataType]"
+      :tableData="(data[dataType])"
     ></LisTable>
   </div>
 </template>

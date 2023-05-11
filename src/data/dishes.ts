@@ -1,6 +1,6 @@
 import type { Dish } from '.';
 
-export const dishes: DeepReadonly<Dish[]> = [
+export const dishes: Dish[] = [
   {
     name: '芝士蛋[补充]',
     cookware: '油锅',

@@ -1,6 +1,6 @@
 import type { Beverage } from '.';
 
-export const beverages: DeepReadonly<Beverage[]> = [
+export const beverages: Beverage[] = [
   {
     name: '“大冰棍儿！”',
     price: 35,

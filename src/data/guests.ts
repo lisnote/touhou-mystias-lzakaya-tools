@@ -1,6 +1,6 @@
 import type { Guest } from '.';
 
-export const guests: DeepReadonly<Guest[]> = [
+export const guests: Guest[] = [
   {
     name: '爱丽丝',
     locations: ['魔法森林'],

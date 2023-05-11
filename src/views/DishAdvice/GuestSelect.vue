@@ -5,7 +5,7 @@ import { ref, computed, reactive, onBeforeUnmount } from 'vue';
 import type { Guest } from '@/data';
 
 const emit = defineEmits(['guestSelect']);
-const recentGuests = reactive<string[]>(
+const recentGuests = reactive<String[]>(
   JSON.parse(localStorage.getItem('recentGuests') ?? '[]'),
 );
 const defaultProps = {

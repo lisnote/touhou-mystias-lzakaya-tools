@@ -66,7 +66,7 @@ export type BeverageFeature =
   | '直饮'
   | '中酒精'
   | '全部';
-export type Location = LooseAutocomplete<
+export type Location =
   | '博丽神社'
   | '地灵殿'
   | '红魔馆'
@@ -79,17 +79,18 @@ export type Location = LooseAutocomplete<
   | '特殊'
   | '妖怪兽道'
   | '妖怪之山'
->;
+  | '红魔馆（剧情角色）'
+  | '？？？？？';
 
-export type Beverage = DeepReadonly<{
+export type Beverage = {
   name: String;
   price: number;
   features: BeverageFeature[];
   obtaining: String;
   description: String;
-}>;
+};
 
-export type Dish = DeepReadonly<{
+export type Dish = {
   name: String;
   cookware: Cookware;
   price: Number;
@@ -99,10 +100,10 @@ export type Dish = DeepReadonly<{
   cookingTime: Number;
   unlock: String;
   description: String;
-}>;
+};
 
 export type GuestType = 'normal' | 'rare' | 'special';
-export type Guest = DeepReadonly<{
+export type Guest = {
   name: String;
   locations: Location[];
   balance?: Number[];
@@ -110,13 +111,13 @@ export type Guest = DeepReadonly<{
   unlikedDishTraits?: FootFeature[];
   likedBeverageTraits: BeverageFeature[];
   type: GuestType;
-}>;
+};
 
 export type IngredientType = '海鲜' | '其他' | '肉类' | '蔬菜';
-export type Ingredient = DeepReadonly<{
+export type Ingredient = {
   name: String;
   type: IngredientType;
   features: FootFeature[];
   relatedFoods: string[];
   description: string;
-}>;
+};
