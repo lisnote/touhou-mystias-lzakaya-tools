@@ -48,7 +48,7 @@ router.isReady().then(() => {
       position: relative;
       overflow-y: auto;
       overflow-wrap: break-word;
-      background-color: var(--dev-bg-color-page);
+      background-color: var(--el-bg-color-page);
     }
   }
 }
