@@ -4,7 +4,7 @@ import GuestSelect from './GuestSelect.vue';
 import GuestInfo from './GuestInfo.vue';
 import DishList from './DishList.vue';
 import IngredientList from './IngredientList.vue';
-import { guests, dishes, ingredients } from '@/data';
+import { guests, dishes, ingredients, FootFeature } from '@/data';
 import { ref } from 'vue';
 
 import type { Guest, Dish, Ingredient } from '@/data';
@@ -16,7 +16,7 @@ function guestSelect(value: Guest) {
   guest.value = value;
   filteredDishes.value = dishes
     .reduce((pre, dish) => {
-      let features: string[] = [];
+      let features: FootFeature[] = [];
       for (let feature of dish.features) {
         if (guest.value.unlikedDishTraits?.includes(feature)) return pre;
         if (guest.value.likedDishTraits.includes(feature))
@@ -35,7 +35,7 @@ function dishSelect(value: Dish) {
   dish.value = value;
   filteredIngredients.value = ingredients
     .reduce((pre, ingredient) => {
-      let features: string[] = [];
+      let features: FootFeature[] = [];
       for (let feature of ingredient.features) {
         if (guest.value.unlikedDishTraits?.includes(feature)) return pre;
         if (
