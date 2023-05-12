@@ -2,6 +2,18 @@ import type { Dish } from '.';
 
 export const dishes: Dish[] = [
   {
+    name: '大奢宴[补充]',
+    cookware: '煮锅',
+    price: 105,
+    ingredients: ['黑毛猪肉', '和牛', '河豚'],
+    features: ['昂贵', '下酒', '水产', '高级', '饱腹', '山珍'],
+    missingFeatures: ['家常', '实惠'],
+    cookingTime: 6,
+    unlock: '',
+    description:
+      '奢侈地选用了一系列高级食材炖煮成烩锅，通过火候的精妙控制，将食材之间的特点全部提炼了出来，肉质鲜嫩多汁，香滑入味，令人其味无穷。',
+  },
+  {
     name: '芝士蛋[补充]',
     cookware: '油锅',
     price: 0,
