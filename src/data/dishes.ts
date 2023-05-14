@@ -2,6 +2,42 @@ import type { Dish } from '.';
 
 export const dishes: Dish[] = [
   {
+    name: '黄金酥鱼饼[补充]',
+    cookware: '油锅',
+    price: 40,
+    ingredients: ['鳟鱼', '面粉', '蜂蜜'],
+    features: ['水产', '重油', '下酒', '力量涌现'],
+    missingFeatures: [],
+    cookingTime: 5.4,
+    unlock: '',
+    description:
+      '在鱼馅内加入适量蜂蜜搅拌后，碾压成鱼饼，投入油锅炸至金黄色，随炸随食。',
+  },
+  {
+    name: '仰望天花板派[补充]',
+    cookware: '蒸锅',
+    price: 66,
+    ingredients: ['鳟鱼', '面粉', '桃子'],
+    features: ['昂贵', '下酒', '海味', '招牌', '适合拍照', '猎奇', '特产'],
+    missingFeatures: ['肉'],
+    cookingTime: 5.4,
+    unlock: '',
+    description:
+      '在水果派里探出一个鱼头，仿佛看着地底的天花板，充满了与地狱相衬的绝望气息。',
+  },
+  {
+    name: '奶油焗蟹[补充]',
+    cookware: '油锅',
+    price: 88,
+    ingredients: ['奶油', '螃蟹'],
+    features: ['昂贵', '高级', '下酒', '海味', '鲜', '招牌', '适合拍照'],
+    missingFeatures: [],
+    cookingTime: 7.2,
+    unlock: '',
+    description:
+      '奶油锔的螃蟹在没开盖之前就已经香气四溢，然而这香气只是前戏。撕开蟹钳，弹出白嫩包满的肉质，此时再细细地吸入汤汁，螃蟹固有的鲜味才彻底的融合与释放。',
+  },
+  {
     name: '大奢宴[补充]',
     cookware: '煮锅',
     price: 105,
