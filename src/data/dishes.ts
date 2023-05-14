@@ -215,7 +215,7 @@ export const dishes: Dish[] = [
     name: '班尼迪克蛋',
     cookware: '油锅',
     price: 35,
-    ingredients: ['鸡蛋', '竹笋', '黄油'],
+    ingredients: ['鸡蛋', '竹笋', '黄油', '面粉'],
     features: ['饱腹', '西式', '生', '小巧'],
     missingFeatures: ['甜', '果味'],
     cookingTime: 4.2,
