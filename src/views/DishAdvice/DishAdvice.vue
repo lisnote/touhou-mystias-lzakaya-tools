@@ -18,9 +18,17 @@ function guestSelect(value: Guest) {
     .reduce((pre, dish) => {
       let features: FootFeature[] = [];
       for (let feature of dish.features) {
-        if (guest.value.unlikedDishTraits?.includes(feature)) return pre;
-        if (guest.value.likedDishTraits.includes(feature))
+        if (
+          // 角色讨厌该特性
+          guest.value.unlikedDishTraits?.includes(feature)
+        ) {
+          return pre;
+        } else if (
+          // 角色喜欢该特性
+          guest.value.likedDishTraits.includes(feature)
+        ) {
           features.push(feature);
+        }
       }
       if (features.length > 0) pre.push({ ...dish, features });
       return pre;
@@ -37,14 +45,23 @@ function dishSelect(value: Dish) {
     .reduce((pre, ingredient) => {
       let features: FootFeature[] = [];
       for (let feature of ingredient.features) {
-        if (guest.value.unlikedDishTraits?.includes(feature)) return pre;
         if (
+          // 角色讨厌该特性
+          guest.value.unlikedDishTraits?.includes(feature) ||
+          // 料理与食材不兼容
+          dish.value.missingFeatures.includes(feature)
+        ) {
+          return pre;
+        } else if (
+          // 角色喜欢该特性
           guest.value.likedDishTraits.includes(feature) &&
-          !dish.value.features.includes(feature) &&
-          !dish.value.missingFeatures.includes(feature)
-        )
+          // 料理未包含该特性
+          !dish.value.features.includes(feature)
+        ) {
           features.push(feature);
+        }
       }
+      console.log(features, value);
       if (features.length > 0) pre.push({ ...ingredient, features });
       return pre;
     }, [] as Ingredient[])
