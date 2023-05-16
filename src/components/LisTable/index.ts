@@ -28,7 +28,7 @@ export function parseShortTableProps(value: {
   return Object.entries(value).map(([prop, [label, attrs]]) => {
     function defaultSortMethod(x: any, y: any) {
       if (attrs?.sortMethod) return attrs.sortMethod(x, y);
-      if (Array.isArray(x[prop])) {
+      if (isArray(x[prop])) {
         return x[prop].length - y[prop].length;
       } else if (isString(x[prop])) {
         return x[prop].localeCompare(y[prop]);
