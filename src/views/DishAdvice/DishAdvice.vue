@@ -61,7 +61,6 @@ function dishSelect(value: Dish) {
           features.push(feature);
         }
       }
-      console.log(features, value);
       if (features.length > 0) pre.push({ ...ingredient, features });
       return pre;
     }, [] as Ingredient[])
