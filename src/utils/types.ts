@@ -44,3 +44,17 @@ export function isObject(value: unknown): boolean {
 export function isArray(value: unknown): boolean {
   return Array.isArray(value);
 }
+
+/**
+ * 判断值是否为 String 类型
+ */
+export function isString(value: unknown): boolean {
+  return is(value, 'String');
+}
+
+/**
+ * 判断值是否为 Number 类型
+ */
+export function isNumber(value: unknown): boolean {
+  return is(value, 'Number');
+}

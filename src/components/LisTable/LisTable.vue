@@ -2,15 +2,9 @@
 import { isArray } from '@/utils/types';
 import { ElTable } from 'element-plus';
 import { ref, onMounted, onBeforeUnmount } from 'vue';
+import { TableColumnProp } from './';
 const { tableProps, tableData } = defineProps<{
-  tableProps: {
-    label: string;
-    prop: string;
-    style?: {
-      width?: number;
-      minWidth?: number;
-    };
-  }[];
+  tableProps: TableColumnProp[];
   tableData: any[];
 }>();
 
@@ -39,8 +33,7 @@ onBeforeUnmount(() => {
       v-for="(col, cIndex) in tableProps"
       :prop="col.prop"
       :label="col.label"
-      :width="col.style?.width"
-      :minWidth="col.style?.minWidth"
+      v-bind="col.attrs"
     >
       <template v-slot="{ row }">
         <div v-bind="cIndex === 0 ? { tabindex: 0 } : {}">
