@@ -20,7 +20,7 @@ const tablePropsMap: { [key in DataType]: any } = {
   guests: parseShortTableProps({
     name: ['名称', { width: 130 }],
     locations: ['出现地点'],
-    balance: ['持有金额', { width: 100 }],
+    balance: ['持有金额', { width: 110 }],
     likedDishTraits: ['喜好-料理'],
     likedBeverageTraits: ['喜好-酒水'],
     unlikedDishTraits: ['厌恶'],
