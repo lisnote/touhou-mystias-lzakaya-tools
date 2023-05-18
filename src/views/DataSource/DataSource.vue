@@ -28,8 +28,8 @@ const tablePropsMap: { [key in DataType]: any } = {
   }),
   dishes: parseShortTableProps({
     name: ['名称'],
-    cookware: ['厨具', { width: 70 }],
-    price: ['价格', { width: 60 }],
+    cookware: ['厨具', { width: 80 }],
+    price: ['价格', { width: 80 }],
     ingredients: ['食材'],
     features: ['特性', { minWidth: 150 }],
     missingFeatures: ['反特性'],
@@ -39,14 +39,14 @@ const tablePropsMap: { [key in DataType]: any } = {
   }),
   beverages: parseShortTableProps({
     name: ['名称'],
-    price: ['价格', { width: 60 }],
+    price: ['价格', { width: 80 }],
     features: ['特性'],
     obtaining: ['获取方式'],
     description: ['描述', { minWidth: 300 }],
   }),
   ingredients: parseShortTableProps({
     name: ['名称', { width: 120 }],
-    type: ['类型', { width: 60 }],
+    type: ['类型', { width: 80 }],
     features: ['特性'],
     relatedFoods: ['相关料理', { minWidth: 150 }],
     description: ['描述', { minWidth: 300 }],
@@ -67,7 +67,7 @@ const tablePropsMap: { [key in DataType]: any } = {
       :key="dataType"
       v-show="activedTab === dataType"
       :tableProps="tablePropsMap[dataType]"
-      :tableData="(data[dataType])"
+      :tableData="data[dataType]"
     ></LisTable>
   </div>
 </template>
