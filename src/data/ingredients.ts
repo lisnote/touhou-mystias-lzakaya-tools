@@ -34,7 +34,7 @@ export const ingredients: Ingredient[] = [
     name: '并蒂莲 (DLC2)',
     type: '其他',
     features: ['文化底蕴', '高级', '传说', '清淡', '梦幻'],
-    relatedFoods: [''],
+    relatedFoods: [],
     description:
       '根茎生长在桥的附近，花朵成熟后会破水而出，淡红色并有淡香味，高级食材，也是地底人的节日装饰。',
   },
@@ -135,7 +135,7 @@ export const ingredients: Ingredient[] = [
     name: '黑盐 (DLC1)',
     type: '其他',
     features: ['咸'],
-    relatedFoods: [''],
+    relatedFoods: [],
     description:
       '火山能量，积累上千万年；只为净化，你灵魂的尘埃......广告词这样写着，其实就是普通的火山岩盐。',
   },
@@ -211,7 +211,7 @@ export const ingredients: Ingredient[] = [
     name: '莲子 (DLC3)',
     type: '其他',
     features: ['招牌', '清淡', '文化底蕴'],
-    relatedFoods: [''],
+    relatedFoods: [],
     description:
       '非常古老的水生植物--莲的种子。莲子的芯特别苦，千万得处理好，别混到料理给客人吃了。',
   },
@@ -321,7 +321,7 @@ export const ingredients: Ingredient[] = [
     name: '葡萄',
     type: '其他',
     features: ['果味', '甜'],
-    relatedFoods: [''],
+    relatedFoods: [],
     description: '在红魔馆种植的用于酿酒的葡萄',
   },
   {
@@ -342,7 +342,7 @@ export const ingredients: Ingredient[] = [
     name: '松子 (DLC3)',
     type: '其他',
     features: ['招牌', '清淡', '高级'],
-    relatedFoods: [''],
+    relatedFoods: [],
     description:
       '红松树的种子，据说在外界已经被列为濒危物种，但在幻想乡仍然很常见。传说松子有延年益寿的功能，是古代道士辟谷时的常备之物。',
   },
@@ -409,7 +409,7 @@ export const ingredients: Ingredient[] = [
     name: '章鱼',
     type: '海鲜',
     features: ['水产', '鲜', '海味'],
-    relatedFoods: [''],
+    relatedFoods: [],
     description:
       '鲜嫩可爱的海洋生物，但幻想乡没有海......它的脚是宝贝，有压倒性的肉质感，而且只要用最简单的火烤，就能享受弹牙的美味！',
   },
@@ -417,7 +417,7 @@ export const ingredients: Ingredient[] = [
     name: '芝士 (DLC2)',
     type: '其他',
     features: ['高级', '咸', '鲜'],
-    relatedFoods: [''],
+    relatedFoods: [],
     description:
       '浓郁的奶油熟成后的珍贵食材，取一片加热融化就能让料理变得奶香浓郁，美味十足。',
   },
