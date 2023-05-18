@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useMainStore } from '@/store';
+import { menuRoutes } from '@/router';
 const mainStore = useMainStore();
 const bilibiliLink = import.meta.env.VITE_BILIBILI;
 </script>
@@ -9,8 +10,16 @@ const bilibiliLink = import.meta.env.VITE_BILIBILI;
       <RouterLink to="/" class="project-name">
         {{ mainStore.projectName.toUpperCase() }}
       </RouterLink>
-      <RouterLink to="DishAdvice" class="divide">推荐菜</RouterLink>
-      <RouterLink to="DataSource" class="divide">数据源</RouterLink>
+      <span class="divide-x">
+        <RouterLink
+          v-for="item in menuRoutes"
+          :key="item.title"
+          :to="item.path"
+          class="px-2"
+        >
+          {{ item.title }}
+        </RouterLink>
+      </span>
     </div>
     <a class="navigator-action" :href="bilibiliLink">
       <img
@@ -41,9 +50,5 @@ const bilibiliLink = import.meta.env.VITE_BILIBILI;
       margin: 0 0.5rem;
     }
   }
-}
-.divide {
-  border-left-width: 1px;
-  padding:0 10px;
 }
 </style>
