@@ -29,13 +29,13 @@ export function parseShortTableProps(value: {
     function defaultSortMethod(x: any, y: any) {
       if (attrs?.sortMethod) return attrs.sortMethod(x, y);
       if (isArray(x[prop])) {
-        return x[prop].length - y[prop].length;
+        return x[prop].length - (y[prop]?.length ?? 0);
       } else if (isString(x[prop])) {
         return x[prop].localeCompare(y[prop]);
       } else if (isNumber(x[prop])) {
         return x[prop] - y[prop];
       }
-      return 0;
+      return -1;
     }
     return {
       prop,
