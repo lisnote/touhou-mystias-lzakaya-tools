@@ -9,7 +9,6 @@ const data = {
   dishes,
   guests,
   ingredients,
-  locations,
 };
 
 export * from './beverages';
@@ -18,4 +17,4 @@ export * from './ingredients';
 export * from './guests';
 export * from './locations';
 export * from './index.d';
-export default data;
+export { data as default, locations };
