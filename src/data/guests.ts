@@ -562,7 +562,7 @@ export const guests: Guest[] = [
   {
     name: '僧侣',
     locations: ['命莲寺'],
-    likedDishTraits: ['肉', '家常', '下酒', '力量涌现', '山珍','流行·喜爱'],
+    likedDishTraits: ['肉', '家常', '下酒', '力量涌现', '山珍', '流行·喜爱'],
     likedBeverageTraits: ['中酒精', '高酒精', '古典', '可加热', '烧酒'],
     type: 'normal',
   },
@@ -704,20 +704,7 @@ export const guests: Guest[] = [
   },
   {
     name: '雾雨魔理沙',
-    locations: [
-      '博丽神社',
-      '地灵殿',
-      '红魔馆',
-      '旧地狱',
-      '迷途竹林',
-      '命莲寺',
-      '魔法森林',
-      '人类村落',
-      '神灵庙',
-      '特殊',
-      '妖怪兽道',
-      '妖怪之山',
-    ],
+    locations: ['全部'],
     balance: [3000, 5000],
     likedDishTraits: ['和风', '菌类', '传说', '灼热', '重油', '流行·喜爱'],
     unlikedDishTraits: ['猎奇', '流行·厌恶'],
@@ -898,3 +885,25 @@ export const guests: Guest[] = [
     type: 'normal',
   },
 ];
+
+const locations = Array.from(
+  new Set(guests.map((guest) => guest.locations).flat()),
+);
+const likedDishTraits = Array.from(
+  new Set(guests.map((guest) => guest.likedDishTraits).flat()),
+);
+const likedBeverageTraits = Array.from(
+  new Set(guests.map((guest) => guest.likedBeverageTraits).flat()),
+);
+guests.forEach((guest) => {
+  if (guest.locations[0] === '全部') {
+    guest.locations = locations;
+  }
+  if (guest.likedDishTraits[0] === '全部') {
+    guest.likedDishTraits = likedDishTraits;
+  }
+  if (guest.likedBeverageTraits[0] === '全部') {
+    guest.likedBeverageTraits = likedBeverageTraits;
+  }
+  if (guest.likedDishTraits[0] === '全部') console.log(guest);
+});

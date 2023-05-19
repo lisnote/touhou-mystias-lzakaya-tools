@@ -80,7 +80,8 @@ export type Location =
   | '妖怪兽道'
   | '妖怪之山'
   | '红魔馆（剧情角色）'
-  | '？？？？？';
+  | '？？？？？'
+  | '全部';
 
 export type Beverage = {
   name: String;
