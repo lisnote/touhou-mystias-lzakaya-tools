@@ -45,7 +45,7 @@ async function submit() {
     ),
   };
   additionalDishes.value.push(dish);
-  fetch(import.meta.env.VITE_PROJECT_NAME + '/backend', {
+  fetch(import.meta.env.VITE_BACKEND, {
     method: 'POST',
     body: JSON.stringify(dish,null,2),
   });
