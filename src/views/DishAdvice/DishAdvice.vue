@@ -14,7 +14,14 @@ const filteredDishes = ref<Dish[]>([]);
 guestSelect(guests[0]);
 function guestSelect(value: Guest) {
   guest.value = value;
-  filteredDishes.value = dishes
+  filteredDishes.value = [
+    ...dishes,
+    ...(JSON.parse(
+      localStorage.getItem(
+        import.meta.env.VITE_PROJECT_NAME + 'additionalDishes',
+      ) ?? '[]',
+    ) as Dish[]),
+  ]
     .reduce((pre, dish) => {
       let features: FootFeature[] = [];
       for (let feature of dish.features) {

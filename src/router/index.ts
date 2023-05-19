@@ -12,6 +12,11 @@ const menuRoutes: RouteRecordRaw[] = [
     title: '数据源',
     component: () => import('@/views/DataSource'),
   },
+  {
+    path: '/Additional',
+    title: '额外菜单',
+    component: () => import('@/views/Additional'),
+  },
 ];
 
 const router = createRouter({
