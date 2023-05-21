@@ -31,23 +31,29 @@ async function submit() {
   await formRef.value?.validate((value) => (validation = value));
   if (!validation) return;
   const dish: any = {
+    token: '暂时还没有token',
     ...formData,
     price: Number(formData.price ?? 0),
     cookingTime: Number(formData.cookingTime ?? 0),
-    ingredients: formData.ingredients
-      .split(/,|，/)
-      .map((item: string) => item.trim()),
-    features: formData.features
-      .split(/,|，/)
-      .map((item: string) => item.trim()),
-    missingFeatures: (formData.missingFeatures?.split(/,|，/) ?? []).map(
-      (item: string) => item.trim(),
+    ingredients: JSON.stringify(
+      formData.ingredients.split(/,|，/).map((item: string) => item.trim()),
+    ),
+    features: JSON.stringify(
+      formData.features.split(/,|，/).map((item: string) => item.trim()),
+    ),
+    missingFeatures: JSON.stringify(
+      (formData.missingFeatures?.split(/,|，/) ?? []).map((item: string) =>
+        item.trim(),
+      ),
     ),
   };
   additionalDishes.value.push(dish);
-  fetch(import.meta.env.VITE_BACKEND, {
+  fetch(import.meta.env.VITE_BACKEND + '/insert', {
     method: 'POST',
-    body: JSON.stringify(dish,null,2),
+    body: JSON.stringify(dish, null, 2),
+    headers: {
+      'Content-Type': 'application/json; charset=utf-8',
+    },
   });
 }
 // 表格 --------------------------------------------------------------------
@@ -93,7 +99,7 @@ function deleteDish(index: number) {
         <ElInput v-model="formData.unlock" />
       </ElFormItem>
       <ElFormItem prop="description" label="描述">
-        <ElInput type="textarea" v-model="formData.description" rows="5"/>
+        <ElInput type="textarea" v-model="formData.description" rows="5" />
       </ElFormItem>
       <ElFormItem>
         <ElButton @click="submit">提交</ElButton>
