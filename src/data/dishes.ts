@@ -1027,7 +1027,7 @@ export const dishes: Dish[] = [
     name: '竹取姬',
     cookware: '蒸锅',
     price: 65,
-    ingredients: ['竹子', '竹笋', '松露', '黑毛', '猪肉', '白果'],
+    ingredients: ['竹子', '竹笋', '松露', '黑毛猪肉', '白果'],
     features: [
       '昂贵',
       '肉',
